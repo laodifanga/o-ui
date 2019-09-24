@@ -1,4 +1,19 @@
-# mac
+# o-ui
+```
+基于vue[2.6.10]的移动端组件库
+```
+
+## 日志
+
+- 0.1.0
+	- 基础搭建 
+
+## 目录
+- demo 示例
+- public
+- src
+	- components 组件库
+	- styles 公用样式
 
 ## Project setup
 ```

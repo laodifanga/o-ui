@@ -4,7 +4,9 @@
 			oPanel content
 		</oPanel>
 		
-		<div avatar>avatar</div>
+		<div>
+			<div avatar>avatar</div>
+		</div>
 	</div>
 </template>
 
@@ -14,6 +16,6 @@
 
 <style style="stylus">
 	.demo {
-		display: flex;
+		background: var(--color);
 	}
 </style>

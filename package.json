@@ -1,9 +1,21 @@
 {
-  "name": "o-ui",
-  "version": "0.1.0",
-  "private": true,
-	"main": "src/index.js",
+  "name": "o-ui-ldf",
+  "version": "0.1.1",
+	"author": "laodifang <47121862@qq.com>",
+	"keywords": [
+		"o-ui",
+		"oui"
+	],
+  "private": false,
+	"main": "lib/o-ui.umd.min.js",
 	"style": "lib/o-ui.css",
+	"files": [
+		"src",
+		"lib"
+	],
+	"publishConfig": {
+		"registry": "https://registry.npmjs.org"
+	},
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
