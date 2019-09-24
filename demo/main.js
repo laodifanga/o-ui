@@ -5,8 +5,8 @@ Vue.config.productionTip = false
 
 import 'normalize.css'
 
-import oUi from './../src/index.js'
-import {Panel, Pager} from './../lib/o-ui.umd.min.js'
+import oUi from './../src'
+import {Panel, Pager} from './../src'
 Vue.use(oUi)
 
 // // Vue.component('OPanel', Panel)

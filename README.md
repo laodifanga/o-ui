@@ -25,5 +25,5 @@ npm run test
 npm run lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### github
+See [github](https://gitbub.com/laodifanga/o-ui).
