@@ -2,6 +2,7 @@
 demo/
 packages/
 public/
+dist/
 
 # 忽略指定文件
 vue.config.js

@@ -1,7 +1,7 @@
 <template>
 	<div class="demo">
 		<oPanel>
-			oPanel content
+			oPanel
 		</oPanel>
 		
 		<div>
@@ -16,6 +16,6 @@
 
 <style style="stylus">
 	.demo {
-		background: var(--color);
+		/* background: var(--color); */
 	}
 </style>

@@ -1,0 +1,8 @@
+{
+	"plugins": [
+		["component", {
+			"libraryName": "o-ui-ldf",
+			"styleLibraryName": "~node_modules/o-ui-ldf/static"
+		}]
+	]
+}

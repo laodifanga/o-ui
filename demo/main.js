@@ -5,12 +5,11 @@ Vue.config.productionTip = false
 
 import 'normalize.css'
 
-import oUi from './../src'
-import {Panel, Pager} from './../src'
+import oUi, {Panel, Pager} from './../lib'
 Vue.use(oUi)
 
-// // Vue.component('OPanel', Panel)
-console.log(oUi, Panel, Pager)
+Vue.use(Panel)
+// console.log(oUi, Panel, Pager)
 
 
 

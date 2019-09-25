@@ -1,17 +1,19 @@
 {
   "name": "o-ui-ldf",
-  "version": "0.1.1",
+	"prefix": "O",
+  "version": "0.1.2",
 	"author": "laodifang <47121862@qq.com>",
 	"keywords": [
 		"o-ui",
 		"oui"
 	],
   "private": false,
-	"main": "lib/o-ui.umd.min.js",
-	"style": "lib/o-ui.css",
+	"main": "lib/index.js",
+	"style": "package/index.css",
 	"files": [
-		"src",
-		"lib"
+		"lib",
+		"package",
+		"static"
 	],
 	"publishConfig": {
 		"registry": "https://registry.npmjs.org"
@@ -19,7 +21,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lib": "vue-cli-service build --target lib --name o-ui --dest lib src/index.js",
+    "lib": "vue-cli-service build --target lib --name index --dest package lib/index.js",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
