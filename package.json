@@ -1,7 +1,7 @@
 {
   "name": "o-ui-ldf",
 	"prefix": "O",
-  "version": "0.1.2",
+  "version": "0.1.4",
 	"author": "laodifang <47121862@qq.com>",
 	"keywords": [
 		"o-ui",
@@ -12,8 +12,7 @@
 	"style": "package/index.css",
 	"files": [
 		"lib",
-		"package",
-		"static"
+		"package"
 	],
 	"publishConfig": {
 		"registry": "https://registry.npmjs.org"

@@ -17,5 +17,5 @@
 	}
 </script>
 
-<style src="../../../static/base.css"></style>
-<style src="../../../static/Pager/index.css"></style>
+<style src="../../base.css"></style>
+<style src="../style.css"></style>

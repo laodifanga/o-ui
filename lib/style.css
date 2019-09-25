@@ -1,0 +1,9 @@
+@import url("./base.css");
+
+[avatar] {
+	display: inline-block;
+	width: 80px;
+	height: 80px;
+	background: purple;
+	border: 1px solid green;
+}

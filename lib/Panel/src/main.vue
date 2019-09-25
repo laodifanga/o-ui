@@ -17,5 +17,4 @@
 	}
 </script>
 
-<style src="../../../static/base.css"></style>
-<style src="../../../static/Panel/index.css"></style>
+<style src="../style.css"></style>

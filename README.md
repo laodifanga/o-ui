@@ -3,8 +3,28 @@
 基于vue[2.6.10]的移动端组件库
 ```
 
+## 使用
+```
+npm install o-ui-ldf -S
+import OUI from 'o-ui-ldf'
+Vue.use(OUI)
+
+按需引入
+npm i babel-plugin-component -S
+.babelrc
+{
+	"plugins": [
+		["component", {
+			"libraryName": "o-ui-ldf",
+			"styleLibraryName": "~node_modules/o-ui-ldf/static"
+		}]
+	]
+}
+import {Pager} from 'o-ui-ldf'
+Vue.use(Pager)
+```
 ## 日志
-- 0.1.2
+- 0.1.2-4
 	- 目录变更 
 - 0.1.1
 	- 基础搭建 
@@ -13,9 +33,8 @@
 ## 目录
 - demo 示例
 - public
-- src
-	- components 组件库
-	- styles 公用样式
+- lib //组件库
+- static // 样式
 
 ## Project setup
 ```
