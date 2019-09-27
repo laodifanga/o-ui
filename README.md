@@ -19,7 +19,7 @@
 }
 ```
 
-## 使用[基于vuecli3.x]
+## 全量加载[基于vuecli3.x]
 ```js
 npm install o-ui-ldf -S
 import OUI from 'o-ui-ldf'
@@ -39,8 +39,13 @@ npm i babel-plugin-component -S
 		}]
 	]
 }
-import OUI, {Pager} from 'o-ui-ldf'
-Vue.use(Pager)
+import OUI, {pager} from 'o-ui-ldf'
+Vue.use(pager)
+
+// OR
+
+Vue.component(pager.name, pager)
+
 ```
 
 ## 日志
