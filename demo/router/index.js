@@ -4,7 +4,8 @@ Vue.use(Router)
 
 
 let children = [ // 组件
-	{path: 'css/avatar', component: c => import('./pages/css/avatar')}
+	{path: 'css/avatar', component: c => import('./pages/css/avatar')},
+	{path: 'css/color', component: c => import('./pages/css/color')},
 ]
 
 let routes = [

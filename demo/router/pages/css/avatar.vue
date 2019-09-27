@@ -5,6 +5,9 @@
 </template>
 
 <script>
+	export default {
+		__name: 'avatar|头像'
+	}
 </script>
 
 <style>
