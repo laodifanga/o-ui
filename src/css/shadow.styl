@@ -1,13 +1,12 @@
-@import '../var'
 $shadow-color = rgba(0,0,0,.1)
 
-$bottom = 14pxr
+$bottom = 28px
 $deg = 14deg
 [shadow]
-  box-shadow 0 6pxr 8pxr $shadow-color
+  box-shadow 0 12px 16px $shadow-color
 
 [shadow~='c']
-  box-shadow 0 6pxr 8pxr currentColor
+  box-shadow 0 12px 16px currentColor
 
 [shadow~='e']
   position relative
@@ -48,6 +47,5 @@ $deg = 14deg
 
   &:before
     top 12%
-    // z-index -1
-    filter blur(5pxr) brightness(88%) opacity(.88)
+    filter blur(12px) brightness(88%) opacity(.88)
     transform scale(.95)

@@ -1,9 +1,7 @@
-@import '../var'
-
 [border]
-  border .5px solid $border-color
+  border 1px solid var(--silver)
 [border~='c']
-  border .5px solid currentColor
+  border 1px solid currentColor
 
 [border~='dashed']
   border-style dashed
@@ -17,13 +15,13 @@
   border-color transparent
 
 [border~='t']
-  border-top-color $border-color
+  border-top-color var(--silver)
 [border~='r']
-  border-right-color $border-color
+  border-right-color var(--silver)
 [border~='b']
-  border-bottom-color $border-color
+  border-bottom-color var(--silver)
 [border~='l']
-  border-left-color $border-color
+  border-left-color var(--silver)
 
 [border~='c']
   &[border~='t']

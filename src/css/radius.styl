@@ -1,13 +1,11 @@
-@import '../var'
-
 [radius]
-  border-radius 4pxr
+  border-radius 8px
 
 for i in 2 3 4
   [radius~=\'{i * 4}\']
-    border-radius i * 4 * 1pxr
+    border-radius i * 4 * 2px
 
 [radius~='50']
   border-radius 50%
 [radius~='100']
-  border-radius 9999pxr
+  border-radius 9999px

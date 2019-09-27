@@ -1,5 +1,6 @@
 <template>
 	<div class="root">
+		
 		<details details>
 			<summary>
 				分组名称
@@ -8,9 +9,9 @@
 			<router-link to="/root">root</router-link>
 		</details>
 		
-		<details details>
+		<details details open>
 			<summary>
-				分组名称
+				css
 			</summary>
 			
 			<router-link to="/root/css/avatar">avatar</router-link>
@@ -26,6 +27,21 @@
 </template>
 
 <script>
+	const getRoutes = () => {
+		let context = require.context('./pages', true, /\.vue$/)
+		console.log(context.keys())
+		return ''
+	}
+	
+	getRoutes()
+	
+	export default {
+		data() {
+			return {
+				
+			}
+		}
+	}
 </script>
 
 <style lang="stylus" scoped>
