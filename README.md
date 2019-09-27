@@ -47,6 +47,12 @@ Vue.use(pager)
 Vue.component(pager.name, pager)
 
 ```
+## template
+```html
+<o-pager>
+	...
+</o-pager>
+```
 
 ## 日志
 - 0.1.2-15
