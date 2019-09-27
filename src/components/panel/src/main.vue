@@ -5,7 +5,7 @@
 </template>
 
 <script>
-	import {version, prefix} from '../../../package.json'
+	import {version, prefix} from '../../../../package.json'
 	export default {
 		name: `${prefix}Panel`,
 		
@@ -17,4 +17,4 @@
 	}
 </script>
 
-<style src="../style.css"></style>
+<style src="../style.styl" lang="stylus"></style>

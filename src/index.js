@@ -1,9 +1,10 @@
+// 按需加载 babel-plugin-component 目录名必须为lib
 import { version, prefix } from '../package.json'
 
-import './style.css'
+import panel from './components/panel'
+import pager from './components/pager'
 
-import panel from './panel'
-import pager from './pager'
+import './style.styl'
 
 let components = [
 	panel, pager,
@@ -21,15 +22,7 @@ if (typeof window !== 'undefined' && window.Vue) {
 	install(window.Vue)
 }
 
-export {
-	install,
-	panel,
-	pager,
-}
-
 export default {
 	install,
-	version,
-	panel,
-	pager,
+	version
 }
