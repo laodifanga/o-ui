@@ -81,5 +81,20 @@ npm run test
 npm run lint
 ```
 
+### lib 库打包
+```
+npm run lib
+```
+
+### 打包组件
+```
+npm run build:component
+```
+
+### gulp方式打包css
+```
+npm run build:css
+```
+
 ### github
 See [github](https://gitbub.com/laodifanga/o-ui).
