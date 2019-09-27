@@ -52,9 +52,9 @@ Vue.use(Pager)
 
 ## 目录
 - demo 示例
-- public
-- lib //组件库
-- static // 样式
+- lib // 库包
+- src // 组件库
+	- components 基础组件 
 
 ## Project setup
 ```
