@@ -1,0 +1,84 @@
+@import '../var'
+// -------------- 间隔 text="12 14 16 20 24 28 32 36 40 48 56 64 72"
+sizes = 12 14 16 20 24 28 32 36 40 48 56 64 72
+for n,i in sizes
+  [text~=\'{n}\']
+    if n == 12
+      font-size 12px
+    else
+      font-size n * 1pxr
+[text~='sm']
+  display inline-block
+  font-size 12px
+  transform scale(.85)
+  transform-origin left center
+
+[text~=b]
+  font-weight 700
+[text~=i]
+  font-style italic
+
+[text~=ss]
+  font-family PingFang SC,STHeitiSC-Light,Helvetica-Light,arial,sans-serif
+
+[text~='tl']
+  text-align left
+[text~='tc']
+  text-align center
+[text~='tr']
+  text-align right
+[text~='tj']
+  text-align-last justify
+  text-align justify
+  // &:after
+  //   content ''
+  //   display inline-block
+  //   width 100%
+  //   box-sizing border-box
+  //   overflow hidden
+  //   background red
+
+
+[text~='vm']
+  vertical-align middle
+
+[text~='ell']
+  ell()
+[text~='ell2'] {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    /*! autoprefixer: off */
+    -webkit-box-orient: vertical;
+    /* autoprefixer: on */
+
+    /*! autoprefixer: off */
+    -webkit-box-orient: vertical;
+
+    /* autoprefixer: off */
+    -webkit-box-orient: vertical;
+
+    text-overflow: ellipsis;
+    overflow: hidden;
+    word-break: break-all;
+}
+
+[text~='x']
+  overflow-x auto
+  white-space nowrap
+
+[text~='y']
+  overflow-y auto
+
+[text~='auto']
+  overflow auto
+
+[text~='wrap']
+  word-wrap break-word
+  word-break break-all
+
+[text~='c']
+  text-transform capitalize
+[text~='u']
+  text-transform uppercase
+[text~='l']
+  text-transform lowercase

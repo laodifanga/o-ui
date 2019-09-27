@@ -1,0 +1,28 @@
+@import '../var'
+// -------------- 间隔 grap="p10 pt10 pr10 pb10 pl10 m10"
+nums = 2 4 8 12 16 20 24 28 32 36
+createGaps(n, unit, grapName = 'gap')
+  [{grapName}~=p{n}]
+    padding n * unit
+  [{grapName}~=pt{n}]
+    padding-top n * unit
+  [{grapName}~=pr{n}]
+    padding-right n * unit
+  [{grapName}~=pb{n}]
+    padding-bottom n * unit
+  [{grapName}~=pl{n}]
+    padding-left n * unit
+
+  [{grapName}~=m{n}]
+    margin n * unit
+  [{grapName}~=mt{n}]
+    margin-top n * unit
+  [{grapName}~=mr{n}]
+    margin-right n * unit
+  [{grapName}~=mb{n}]
+    margin-bottom n * unit
+  [{grapName}~=ml{n}]
+    margin-left n * unit
+
+for n,i in nums
+  createGaps(n, 1pxr)

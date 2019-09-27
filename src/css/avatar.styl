@@ -1,0 +1,67 @@
+@import '../base'
+
+[avatar] {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+  z-index: 1;
+	background: var(--silver, grey);
+}
+
+[avatar~=sm]
+  width 56px
+  height 56px
+  line-height 56px
+
+[avatar~=md]
+  width 112px
+  height 112px
+  line-height 112px
+
+[avatar~=lg]
+  width 144px
+  height 144px
+  line-height 144px
+
+[avatar~=group]
+  width auto
+  height auto
+  display flex
+  background none
+  [avatar]
+    display block
+    border 1px solid rgba(255,255,255,.75)
+    &:not(:first-child)
+      margin-left -32px
+  [avatar~=sm]
+    &:not(:first-child)
+      margin-left -24px
+  [avatar~=md]
+    &:not(:first-child)
+      margin-left -48px
+  [avatar~=lg]
+    &:not(:first-child)
+      margin-left -64px
+
+[avatar~=reverse]
+  justify-content flex-end
+  direction rtl
+  unicode-bidi bidi-override
+  [avatar]
+    margin-left -32px
+    &:last-child
+      margin-left 0px
+  [avatar~=sm]
+    margin-left -24px
+  [avatar~=md]
+    margin-left -48px
+  [avatar~=lg]
+    margin-left -64px
+[avatar~=hover]
+  [avatar]
+    &:hover
+      z-index 2

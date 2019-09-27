@@ -1,0 +1,41 @@
+.o-fade-enter-active, .o-fade-leave-active
+  transition opacity $transTime
+.o-fade-enter, .o-fade-leave-to
+  opacity 0
+
+.o-zoom-enter-active, .o-zoom-leave-active
+  transition transform $transTime, opacity ($transTime)
+.o-zoom-enter, .o-zoom-leave-to
+  opacity 0
+  transform scale(1.2)
+
+.o-move-top-enter-active, .o-move-top-leave-active,
+.o-move-right-enter-active, .o-move-right-leave-active,
+.o-move-bottom-enter-active, .o-move-bottom-leave-active,
+.o-move-left-enter-active, .o-move-left-leave-active
+  transition transform $transTime, opacity ($transTime)
+.o-move-top-enter, .o-move-top-leave-to,
+.o-move-right-enter, .o-move-right-leave-to,
+.o-move-bottom-enter, .o-move-bottom-leave-to,
+.o-move-left-enter, .o-move-left-leave-to
+  opacity 0
+
+.o-move-top-enter, .o-move-top-leave-to
+  transform translate3d(0,-100%,0)
+.o-move-right-enter, .o-move-right-leave-to
+  transform translate3d(100%,0,0)
+.o-move-bottom-enter, .o-move-bottom-leave-to
+  transform translate3d(0,100%,0)
+.o-move-left-enter, .o-move-left-leave-to
+  transform translate3d(-100%,0,0)
+
+
+@keyframes oSpin
+  to
+    transform rotate(360deg)
+@keyframes oFade
+  from
+    opacity 0
+[spin]
+  display inline-block
+  animation oSpin ($transTime * 4) infinite linear

@@ -1,0 +1,37 @@
+@import '../var'
+
+$rd = .4em
+
+[tip]
+  position relative
+
+  &:after
+
+    content attr(tip)
+    position absolute
+    left 50%
+    bottom calc(100% + 2pxr)
+    transform translateX(-50%)
+    background rgba(0,0,0,.8)
+    color #fff
+    font-size 12pxr
+    border-radius $rd
+    line-height 1
+    padding .25em .5em
+    display none
+  &:active, &:hover
+    &:after
+      display block
+      animation oFade .25s
+
+  &[place='t'] { &:after {left: 50%; border-radius $rd } }
+  &[place='tl'] { &:after {left: 0; transform: none; bottom: calc(100% + 2pxr); border-radius $rd $rd $rd 0 } }
+  &[place='tr'] { &:after {left: auto; right: 0; transform: none; border-radius $rd $rd 0 $rd } }
+
+  &[place='b'] { &:after {bottom: auto; top: calc(100% + 2pxr); left: 50%; border-radius $rd } }
+  &[place='bl'] { &:after {bottom: auto; left: 0; transform: none;  top: calc(100% + 2pxr); border-radius 0 $rd $rd $rd} }
+  &[place='br'] { &:after {bottom: auto; transform: none; top: calc(100% + 2pxr); left: auto; right: 0; border-radius $rd 0 $rd $rd } }
+
+  &[place='cl'] { &:after {right: calc(100% + 2pxr); bottom: auto; left: auto; top: 50%; transform: translateY(-50%); border-radius $rd } }
+  &[place='cr'] { &:after {left: calc(100% + 2pxr); bottom: auto; top: 50%; transform: translateY(-50%); border-radius $rd } }
+

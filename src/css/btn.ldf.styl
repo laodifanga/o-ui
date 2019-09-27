@@ -1,0 +1,91 @@
+@import '../var'
+
+[btn]
+  display inline-block
+  outline none
+  border 0 none
+  border-radius $radius
+  box-sizing border-box
+  cursor pointer
+  margin 0
+  background gray40
+  font-weight 500
+  text-align center
+  text-decoration none
+  // color dark
+  padding .75em 1em
+  white-space nowrap
+  overflow hidden
+  min-width 5.5em
+  // height 1em
+  line-height 1
+  vertical-align middle
+  user-select none
+  // transition all $transition-duration
+  -webkit-appearance none
+  -webkit-tap-highlight-color rgba(0, 0, 0, 0)
+  &:active
+    background-image linear-gradient(to right, rgba(0,0,0,.05), rgba(0,0,0,.1))
+    opacity .9
+[btn~='text']
+  // color $color-primary
+  background none
+[btn~='plat']
+  background none
+  border .5px solid currentColor
+
+[btn~='sm']
+  padding .5em .75em
+  font-size .7em
+  min-width 4.5em
+[btn~='md']
+  padding .7em 1em
+  font-size .9em
+  min-width 5em
+[btn~='lg']
+  padding 1.2em
+  font-size 1.2em
+  min-width 6.5em
+
+[btn~='fillet']
+  border-radius 9999pxr
+[btn~='block']
+  display block
+  width 100%
+[btn~='rect']
+  border-radius 0
+
+[btn~='group']
+  padding 0
+  border none
+  background none
+  clear()
+  &:active
+    background-image none
+  & > [btn]
+    float left
+    border-radius 0
+    &:not(:last-child)
+      border-right none
+
+    // &:first-child
+    //   border-radius $radius 0 0 $radius
+    // &:last-child
+    //   border-radius $radius 0 0 $radius
+
+[btn~='border']
+  & > [btn]
+    border 0 none
+    &:not(:first-child)
+      border-left 1px solid rgba(0,0,0,.075)
+
+[btn~='radius']
+  border-radius 4pxr
+
+
+[btn~='rect']
+  & > [btn]
+    &:first-child
+      border-radius 0
+    &:last-child
+      border-radius 0

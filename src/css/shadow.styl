@@ -1,0 +1,53 @@
+@import '../var'
+$shadow-color = rgba(0,0,0,.1)
+
+$bottom = 14pxr
+$deg = 14deg
+[shadow]
+  box-shadow 0 6pxr 8pxr $shadow-color
+
+[shadow~='c']
+  box-shadow 0 6pxr 8pxr currentColor
+
+[shadow~='e']
+  position relative
+  &:before, &:after
+    content ''
+    position absolute
+    z-index -1
+    width 80%
+    height 35%
+    bottom $bottom
+    background transparent
+    box-shadow 0 ($bottom / 1.15) ($bottom / 1.5) rgba(0, 0, 0, .25)
+
+  &:before
+    left 5%
+    transform skewX(-($deg / 2.5)) rotate(-($deg / 2.5))
+  &:after
+    right 5%
+    transform skewX(($deg / 2.5)) rotate(($deg / 2.5))
+
+  &[shadow~='c']
+    box-shadow none
+    &:before, &:after
+      box-shadow 0 ($bottom / 1.15) ($bottom / 1.5) currentColor
+
+
+[shadow~='bg']
+  position relative
+  &:before, &:after
+    content ''
+    background inherit
+    border-radius inherit
+    position absolute
+    left 0
+    top 0
+    width 100%
+    height 100%
+
+  &:before
+    top 12%
+    // z-index -1
+    filter blur(5pxr) brightness(88%) opacity(.88)
+    transform scale(.95)

@@ -1,0 +1,15 @@
+@import '../var'
+[pager]
+  position relative
+  height 100%
+  // height 100vmax
+  height 100vh
+  // display flex
+  // flex-direction column
+  & > [pager-content]
+    position relative
+    width 100%
+    height calc(100% - 45pxr)
+    overflow auto
+    box-sizing border-box
+    -webkit-overflow-scrolling touch
