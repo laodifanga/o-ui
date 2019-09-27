@@ -29,7 +29,7 @@ const autoprefixers = autoprefixer({
 })
 
 function compile() {
-  return src('./**/*.styl')
+  return src('./src/**/*.styl')
 		.pipe(stylus())
 		.pipe(autoprefixers)
 		.pipe(postcss([processors]))

@@ -1,17 +1,33 @@
 # o-ui
 ```
 - 基于vue[2.6.10]的移动端组件库
-- 使用vw适配移动端
+- 使用vw适配移动端[750为设计稿]
+```
+
+
+## 适配 postcss-px-to-viewport .postcssrc设置
+```js
+"postcss-px-to-viewport": {
+	viewportWidth: 750,      // 视窗的宽度，对应的是我们设计稿的宽度，一般是750
+	viewportHeight: 1334,    // 视窗的高度，根据750设备的宽度来指定，一般指定1334，也可以不配置
+	unitPrecision: 3,        // 指定`px`转换为视窗单位值的小数位数（很多时候无法整除）
+	viewportUnit: 'vw',      // 指定需要转换成的视窗单位，建议使用vw
+	selectorBlackList: ['ignore', 'ig'],  // 指定不转换为视窗单位的类，可以自定义，可以无限添加,建议定义一至两个通用的类名
+	minPixelValue: 1,       // 小于或等于`1px`不转换为视窗单位，你也可以设置为你想要的值
+	exclude: /(node_modules)/,
+	mediaQuery: false       // 允许在媒体查询中转换`px`
+}
 ```
 
 ## 使用[基于vuecli3.x]
-```
+```js
 npm install o-ui-ldf -S
 import OUI from 'o-ui-ldf'
 import 'o-ui-ldf/lib/index.css'
 Vue.use(OUI)
-
-按需引入-无须引入css
+```
+## 按需引入-无须引入css
+``` js
 npm i babel-plugin-component -S
 .babelrc
 {
@@ -26,6 +42,7 @@ npm i babel-plugin-component -S
 import OUI, {Pager} from 'o-ui-ldf'
 Vue.use(Pager)
 ```
+
 ## 日志
 - 0.1.2-15
 	- 目录变更 解决按需引入问题 
