@@ -21,7 +21,7 @@
     "build": "vue-cli-service build",
     "build:css": "gulp build --gulpfile gulpfile.js",
     "build:component": "webpack --config webpack.component.js",
-    "git": "git add --all && git commit -m 'base' && git push",
+    "git": "git add -A && git commit -m 'base' && git push",
     "lib": "vue-cli-service build --target lib --name index --dest lib src/index.js && npm run build:component",
     "ip": "vue-cli-service inspect",
     "new:c": "node utils/createComponent.js",
