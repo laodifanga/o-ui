@@ -1,4 +1,4 @@
-[npm](https://img.shields.io/npm/v/o-ui-ldf)
+![npm](https://img.shields.io/npm/v/o-ui-ldf)
 # o-ui
 ```
 - 基于vue[2.6.10]的移动端组件库
