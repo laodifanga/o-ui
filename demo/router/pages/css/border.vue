@@ -1,12 +1,14 @@
 <template>
 	<block>
-		color
+		<demo>
+			边框
+		</demo>
 	</block>
 </template>
 
 <script>
 	export default {
-		__name: 'color|颜色'
+		__name: 'border | 边框'
 	}
 </script>
 

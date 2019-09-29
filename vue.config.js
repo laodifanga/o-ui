@@ -13,6 +13,11 @@ module.exports = {
 		}
 	},
 	
+	chainWebpack: config => {
+		config.resolve.alias
+			.set('@', resolve('demo'))
+	}
+	
 	// // 扩展 webpack 配置，使 src 加入编译
 	// chainWebpack: config => {
 	// 	config.resolve.alias

@@ -8,6 +8,11 @@ import 'normalize.css'
 import oUi, {panel, pager} from './../src'
 Vue.use(oUi)
 
+import Block from '@/components/block'
+import Demo from '@/components/demo'
+Vue.component('Block', Block)
+Vue.component('Demo', Demo)
+
 new Vue({
 	router,
   render: h => h(App)

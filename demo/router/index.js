@@ -2,11 +2,9 @@ import Vue from 'vue'
 import Router from 'vue-router'
 Vue.use(Router)
 
+import {getRoutes} from '@/utils'
 
-let children = [ // 组件
-	{path: 'css/avatar', component: c => import('./pages/css/avatar')},
-	{path: 'css/color', component: c => import('./pages/css/color')},
-]
+let children = getRoutes()
 
 let routes = [
 	{path: '/', redirect: '/root'},

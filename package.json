@@ -21,9 +21,11 @@
     "build": "vue-cli-service build",
     "build:css": "gulp build --gulpfile gulpfile.js",
     "build:component": "webpack --config webpack.component.js",
-		"git": "git add --all && git commit -m 'base' && git push",
+    "git": "git add --all && git commit -m 'base' && git push",
     "lib": "vue-cli-service build --target lib --name index --dest lib src/index.js && npm run build:component",
     "ip": "vue-cli-service inspect",
+    "new:c": "node utils/createComponent.js",
+    "new:demo": "node utils/createDemo.js",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
@@ -39,6 +41,7 @@
     "autoprefixer": "^9.6.1",
     "babel-eslint": "^10.0.1",
     "babel-plugin-component": "^1.1.1",
+    "chalk": "^2.4.2",
     "clean-webpack-plugin": "^3.0.0",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",

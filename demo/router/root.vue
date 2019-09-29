@@ -11,38 +11,17 @@
 		</details>
 		
 		
-		<transition name="o-move-right" mode="out-in">
-			<router-view class="child-view"></router-view>
-		</transition>
+		<keep-alive>
+			<transition name="o-move-right">
+				<router-view class="child-view"></router-view>
+			</transition>
+		</keep-alive>
 	</div>
 </template>
 
 <script>
-	const getRoutes = () => {
-		let context = require.context('./pages', true, /\.vue$/)
-		return context.keys().map(c => {
-			let {__name} = context(c).default
-			__name = __name ? __name.split('|') : []
-			let path = '/root/' + c.substr(2, c.length - 6)
-			let name = __name.length ? __name[0] : ''
-			let desc = __name.length > 1 ? __name[1] : ''
-			return {path, name, desc}
-		})
-	}
-	
-	let data = (() => {
-		let routes = getRoutes(), data = {}
-		routes.map(r => {
-			let dir = r.path.split('/')[2]
-			if(data[dir]) {
-				data[dir].push(r)
-			} else {
-				data[dir] = [r]
-			}
-		})
-		return data
-	})()
-	
+	import {getRoutes, getRouteData} from '@/utils'
+	let data = getRouteData()
 	
 	export default {
 		data() {

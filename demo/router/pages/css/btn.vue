@@ -1,12 +1,14 @@
 <template>
 	<block>
-		color
+		<demo>
+			btn
+		</demo>
 	</block>
 </template>
 
 <script>
 	export default {
-		__name: 'color|颜色'
+		__name: 'btn | 说明'
 	}
 </script>
 
