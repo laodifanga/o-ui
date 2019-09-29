@@ -1,12 +1,22 @@
 <template>
 	<div class="root">
+		<div class="intro" text="tc" color="bgoui white">
+			<img :src="src" class="intro-logo">
+			<div class="intro-name" text="24">
+				OUI
+			</div>
+		</div>
+		
 		<details details v-for="d,name,i in data" :key="i" open>
-			<summary>
-				{{name.replace('css', 'css样式库')}}
+			<summary color="white" class="sticky">
+				<div gap="p12" text="16" color="bgoui">{{name | magicName}}</div>
 			</summary>
 			
-			<div class="list" v-for="l in d">
-				<router-link :to="{path: l.path}">{{l.name}} - {{l.desc}}</router-link>
+			<div class="list" v-for="l in d" color="black">
+				<div gap="p12" row>
+					<router-link tag="span" col="1" :to="{path: l.path}">{{l.name}}</router-link>
+					<span color="gray" text="14" arrow>{{l.desc}}</span>
+				</div>
 			</div>
 		</details>
 		
@@ -24,11 +34,20 @@
 	let data = getRouteData()
 	
 	export default {
+		filters: {
+			magicName(name) {
+				return name
+					.replace('css', '样式')
+					.replace('components', '组件')
+			}
+		},
+		
 		data() {
 			return {
-				data
+				data,
+				src: 'http://thirdwx.qlogo.cn/mmopen/vi_32/82ypiarh4VEHapO9g7619xiao4KBfEAe6oVXWKkXYTbvdY5tOLQX0cNHVaBO6g9TJNFrYWDvGwgvPicBZTp615mjA/132'
 			}
-		}
+		},
 	}
 </script>
 
@@ -41,4 +60,15 @@
 		height 100vh
 		background: #f0eff4;
 		overflow: auto;
+		
+	.intro
+		padding 2em 0
+		&-logo
+			width 150px
+			height 150px
+		&-name
+			padding 1em 0 0 0
+	.sticky
+		position: sticky; 
+		top: 0;
 </style>

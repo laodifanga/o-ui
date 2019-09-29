@@ -1,7 +1,7 @@
 <template>
 	<div class="com-demo">
 		<div class="com-demo-title">{{title || '示例'}}</div>
-		<div :style="{background: undefined !== background ? background : '#fff', padding: '.5em'}">
+		<div text="wrap" :style="{background: undefined !== background ? background : '#fff', padding: '.5em'}">
 			<slot></slot>
 		</div>
 	</div>

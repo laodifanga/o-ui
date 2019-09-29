@@ -1,4 +1,4 @@
-const {mkdirs, createDir, createFile, resolve, checkDir, log, success} = require('./index.js')
+const {mkdirs, createDir, createFile, resolve, checkDir, err, log, success} = require('./index.js')
 const {demoVueTemplate} = require('./template.js')
 
 log('请输入要生成示例页面名称 xx/xx')
@@ -21,11 +21,12 @@ process.stdin.on('data', async chunk => {
 	
 	try {
 		let componentName = name
-		await createFile(mainVue, demoVueTemplate(componentName))
+		let res = await createFile(mainVue, demoVueTemplate(componentName))
+		if(res === true) success(`示例文件${mainVue}创建完成！`)
 	} catch(e) {
 		err(e.message)
 	}
 	
-	success('示例文件${mainVue}创建完成！')
+	
 	process.stdin.emit('end')
 })

@@ -23,17 +23,17 @@
 		
 		<demo title="头像组 group">
 			<div avatar="group">
-			  <b avatar>老</b>
-			  <b avatar>地</b>
-			  <b avatar>方</b>
+			  <b color="bgoui white" avatar>老</b>
+			  <b color="bgoui white" avatar>地</b>
+			  <b color="bgoui white" avatar>方</b>
 			</div>
 		</demo>
 		
 		<demo title="头像组反向 reverse [radius]">
 			<div avatar="group reverse">
-			  <b radius="100" avatar>老</b>
-			  <b radius="100" avatar>地</b>
-			  <b radius="100" avatar>方</b>
+			  <b color="bgoui white" radius="100" avatar="s">老</b>
+			  <b color="bgoui white" radius="100" avatar="s">地</b>
+			  <b color="bgoui white" radius="100" avatar="s">方</b>
 			</div>
 		</demo>
 	</block>

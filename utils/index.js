@@ -31,7 +31,7 @@ function createDir(directory) {
 
 const createFile = (path, data) => {
 	if (fs.existsSync(path)) {
-		return err(`${path}文件已存在`)
+		return err(`${path} 文件已存在`)
 	}
 	return new Promise((resolve, reject) => {
 		fs.writeFile(path, data, error => {

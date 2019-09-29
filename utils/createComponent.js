@@ -1,4 +1,4 @@
-const {mkdirs, createDir, createFile, resolve, checkDir, log, success} = require('./index.js')
+const {mkdirs, createDir, createFile, resolve, checkDir, err, log, success} = require('./index.js')
 const {vueTemplate, indexJsTemplate, styleTemplate} = require('./template.js')
 log('请输入要生成的组件的名称')
 
@@ -20,14 +20,14 @@ process.stdin.on('data', async chunk => {
 		await createDir(componentDir)
 		await createDir(`${componentDir}/src`)
 		let componentName = input
-		await createFile(mainVue, vueTemplate(componentName))
-		success(`${mainVue}创建成功`)
+		let res = await createFile(mainVue, vueTemplate(componentName))
+		if(res === true) success(`${mainVue}创建成功`)
 		
-		await createFile(indexJs, indexJsTemplate(componentName))
-		success(`${indexJs}创建成功`)
+		res = await createFile(indexJs, indexJsTemplate(componentName))
+		if(res === true) success(`${indexJs}创建成功`)
 		
-		await createFile(styleStyl, styleTemplate(componentName))
-		success(`${styleStyl}创建成功`)
+		res = await createFile(styleStyl, styleTemplate(componentName))
+		if(res === true) success(`${styleStyl}创建成功`)
 	} catch(e) {
 		err(e.message)
 	}
