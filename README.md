@@ -56,6 +56,10 @@ Vue.component(pager.name, pager)
 ```
 
 ## 日志
+- 0.2.1
+	- 按需引入
+	- 目录变更
+	- 新增命令添加组件和示例页面
 - 0.1.2-15
 	- 目录变更 解决按需引入问题 
 - 0.1.1
@@ -64,8 +68,8 @@ Vue.component(pager.name, pager)
 
 ## 目录
 - demo 示例
-- lib // 库包
-- src // 组件库
+- lib // 使用库
+- src // 组件库源码
 	- components 基础组件 
 
 ## Project setup

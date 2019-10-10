@@ -1,7 +1,8 @@
 {
   "name": "o-ui-ldf",
+	"description": "OUI移动端VUE前端UI库 A mobile UI components Library with Vue.js",
   "prefix": "O",
-  "version": "0.1.15",
+  "version": "0.2.1",
   "author": "laodifang <47121862@qq.com>",
   "keywords": [
     "o-ui",
@@ -23,10 +24,11 @@
     "build:component": "webpack --config webpack.component.js",
     "git": "git add -A && git commit -m 'basic construction' && git push",
     "lib": "vue-cli-service build --target lib --name index --dest lib src/index.js && npm run build:component",
-    "ip": "vue-cli-service inspect",
+    "inspect": "vue-cli-service inspect",
     "new:c": "node utils/createComponent.js",
     "new:demo": "node utils/createDemo.js",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+		"pub": "npm publish --registry http://registry.npmjs.org"
   },
   "dependencies": {
     "core-js": "^2.6.5",

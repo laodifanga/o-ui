@@ -15,7 +15,7 @@
 			<div class="list" v-for="l in d" color="black">
 				<div gap="p12" row>
 					<router-link tag="span" col="1" :to="{path: l.path}">{{l.name}}</router-link>
-					<span color="gray" text="14" arrow>{{l.desc}}</span>
+					<span color="gray" text="14" gap="mr8">{{l.desc}}</span> <span color="gray" arrow></span>
 				</div>
 			</div>
 		</details>
