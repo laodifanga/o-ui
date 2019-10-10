@@ -1,6 +1,6 @@
 <template>
 	<div class="root">
-		<div class="intro" text="tc" color="bgoui white">
+		<div class="intro" text="tc" color="bgmain white">
 			<img :src="src" class="intro-logo">
 			<div class="intro-name" text="24">
 				OUI
@@ -9,13 +9,13 @@
 		
 		<details details v-for="d,name,i in data" :key="i" open>
 			<summary color="white" class="sticky">
-				<div gap="p12" text="16" color="bgoui">{{name | magicName}}</div>
+				<div gap="p12" text="16" color="bgmain">{{name | magicName}}</div>
 			</summary>
 			
-			<div class="list" v-for="l in d" color="black">
-				<div gap="p12" row>
-					<router-link tag="span" col="1" :to="{path: l.path}">{{l.name}}</router-link>
-					<span color="gray" text="14" gap="mr8">{{l.desc}}</span> <span color="gray" arrow></span>
+			<div class="list" v-for="l in d" color="title">
+				<div gap="p12" row @click="$router.push({path: l.path})">
+					<span text="16" col="1">{{l.name}}</span>
+					<span text="14" color="desc" gap="mr8">{{l.desc}}</span> <span color="desc" arrow></span>
 				</div>
 			</div>
 		</details>
@@ -58,7 +58,7 @@
 		left: 0;
 		width 100%
 		height 100vh
-		background: #f0eff4;
+		background: var(--bg);
 		overflow: auto;
 		
 	.intro

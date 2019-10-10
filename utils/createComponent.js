@@ -1,5 +1,5 @@
 const {mkdirs, createDir, createFile, resolve, checkDir, err, log, success} = require('./index.js')
-const {vueTemplate, indexJsTemplate, styleTemplate} = require('./template.js')
+const {vueTemplate, indexJsTemplate, styleTemplate, readmeTemplate} = require('./template.js')
 log('请输入要生成的组件的名称')
 
 process.stdin.on('data', async chunk => {
@@ -10,6 +10,7 @@ process.stdin.on('data', async chunk => {
 	let mainVue = resolve(componentDir, 'src/main.vue')
 	let indexJs = resolve(componentDir, 'index.js')
 	let styleStyl = resolve(componentDir, 'style.styl')
+	let readmeMd = resolve(componentDir, 'README.md')
 	
 	if(checkDir(componentDir)) {
 		return err(`${input}已经存在，请重新输入组件名称`)
@@ -28,6 +29,9 @@ process.stdin.on('data', async chunk => {
 		
 		res = await createFile(styleStyl, styleTemplate(componentName))
 		if(res === true) success(`${styleStyl}创建成功`)
+		
+		res = await createFile(readmeMd, readmeTemplate(componentName))
+		if(res === true) success(`${readmeMd}创建成功`)
 	} catch(e) {
 		err(e.message)
 	}

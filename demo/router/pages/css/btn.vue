@@ -1,8 +1,10 @@
 <template>
 	<block>
+		<a color="main" href="https://github.com/laodifanga/o-ui/blob/master/demo/router/pages/css/btn.vue" slot="more">源码</a>
+
 		<Demo title="按钮类型">
 		  <span gap="m4" btn>默认</span>
-		  <span gap="m4" btn color="bgoui white">color="bgoui white"</span>
+		  <span gap="m4" btn color="bgmain white">color="bgmain white"</span>
 		  <span gap="m4" btn="fit">fit</span>
 		  <span gap="m4" btn="plat">plat</span>
 		  <span gap="m4" btn="plat" radius="8">radius</span>
@@ -12,10 +14,10 @@
 		</Demo>
 		
 		<Demo title="按钮尺寸 s m l">
-			<span gap="m4" btn="s">s</span>
-			<span gap="m4" btn="m">m</span>
-			<span gap="m4" btn>默认</span>
-			<span gap="m4" btn="l">l</span>
+			<span gap="m4" btn="fit s">s</span>
+			<span gap="m4" btn="fit m">m</span>
+			<span gap="m4" btn="fit">默认</span>
+			<span gap="m4" btn="fit l">l</span>
 		</Demo>
 		
 		<Demo title="图标 ico">
@@ -59,10 +61,10 @@
 		  </div>
 		
 		  <div btn="group border" gap="mt8">
-		    <button btn radius="100" color="bgoui white">分组</button>
-		    <button btn radius="100" color="bgoui white">分组</button>
-		    <button btn radius="100" color="bgoui white">分组</button>
-		    <button btn radius="100" color="bgoui white">分组</button>
+		    <button btn radius="100" color="bgmain white">分组</button>
+		    <button btn radius="100" color="bgmain white">分组</button>
+		    <button btn radius="100" color="bgmain white">分组</button>
+		    <button btn radius="100" color="bgmain white">分组</button>
 		  </div>
 		</Demo>
 	</block>

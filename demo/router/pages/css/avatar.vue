@@ -1,39 +1,35 @@
 <template>
 	<block>
+		<a color="main" href="https://github.com/laodifanga/o-ui/blob/master/demo/router/pages/css/avatar.vue" slot="more">源码</a>
+
 		<demo title="avatar">
 			<img :src="src" avatar />
-			<span avatar>A</span>
+			<span avatar text="28">A</span>
 			<span avatar>国</span>
 			<span avatar>avatar</span>
 			<img :src="src" avatar radius="50" />
 		</demo>
 		
 		<demo title="尺寸">
-			<span avatar="s">s</span>
-			<span avatar="m">m</span>
-			<span avatar="l">l</span>
-		</demo>
-		
-		<demo title="尺寸 [text]">
-			<span avatar="s"><b text="24">24</b></span>
-			<span avatar><b text="28">28</b></span>
-			<span avatar="m"><b text="40">40</b></span>
-			<span avatar="l"><b text="56">56</b></span>
+			<span color="bgmain white" avatar="s">s</span>
+			<span color="bgmain white" avatar>默认</span>
+			<span color="bgmain white" avatar="m">m</span>
+			<span color="bgmain white" avatar="l">l</span>
 		</demo>
 		
 		<demo title="头像组 group">
 			<div avatar="group">
-			  <b color="bgoui white" avatar>老</b>
-			  <b color="bgoui white" avatar>地</b>
-			  <b color="bgoui white" avatar>方</b>
+			  <b color="bgmain white" avatar>老</b>
+			  <b color="bgmain white" avatar>地</b>
+			  <b color="bgmain white" avatar>方</b>
 			</div>
 		</demo>
 		
 		<demo title="头像组反向 reverse [radius]">
 			<div avatar="group reverse">
-			  <b color="bgoui white" radius="100" avatar="s">老</b>
-			  <b color="bgoui white" radius="100" avatar="s">地</b>
-			  <b color="bgoui white" radius="100" avatar="s">方</b>
+			  <b color="bgmain white" radius="100" avatar="s">老</b>
+			  <b color="bgmain white" radius="100" avatar="s">地</b>
+			  <b color="bgmain white" radius="100" avatar="s">方</b>
 			</div>
 		</demo>
 	</block>

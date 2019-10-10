@@ -5,8 +5,12 @@ Vue.config.productionTip = false
 
 import 'normalize.css'
 
-import oUi, {panel, pager} from './../src'
+import oUi, {pager} from './../src'
 Vue.use(oUi)
+
+
+import {directive_pager} from '../src/directive/index'
+console.log(directive_pager)
 
 import Block from '@/components/block'
 import Demo from '@/components/demo'

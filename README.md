@@ -3,6 +3,7 @@
 ```
 - 基于vue[2.6.10]的移动端组件库
 - 使用vw适配移动端[750为设计稿]
+- vue-cli3.x脚手架
 ```
 
 
@@ -40,12 +41,16 @@ npm i babel-plugin-component -S
 		}]
 	]
 }
-import OUI, {pager} from 'o-ui-ldf'
+import {pager} from 'o-ui-ldf'
 Vue.use(pager)
 
 // OR
 
 Vue.component(pager.name, pager)
+
+// directive
+import {directive_pager} from 'o-ui-ldf/lib/directive.js'
+Vue.directive('pager', directive_pager)
 
 ```
 ## template
@@ -56,6 +61,11 @@ Vue.component(pager.name, pager)
 ```
 
 ## 日志
+- 0.2.3
+	- 新增directive[pager]
+- 0.2.2
+	- 新增 css[avatar, broder, btn, color, gap]
+	- 新增组件 pager
 - 0.2.1
 	- 按需引入
 	- 目录变更
@@ -114,3 +124,5 @@ npm run build:css
 
 ### github
 See [github](https://gitbub.com/laodifanga/o-ui).
+
+

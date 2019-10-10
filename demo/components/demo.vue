@@ -16,7 +16,11 @@
 <style lang="stylus" scoped>
 	.com-demo
 		&-title
+			position sticky
+			top 90px
+			background var(--line)
 			font-size 28px
 			padding 1em
-			color #999
+			font-weight 700
+			color var(--title)
 </style>

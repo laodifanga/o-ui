@@ -1,12 +1,16 @@
 <template>
 	<div class="com-block">
 		<div class="com-block-bar">
-			<div class="com-block-bar-back" @click="$router.back()"><</div>
-			<div class="com-block-bar-title">{{$route.meta && $route.meta.title || 'blank'}}</div>
+			<div class="com-block-bar-back" @click="$router.back()"><span arrow="l"></span></div>
+			<div class="com-block-bar-title" color="title">{{$route.meta && $route.meta.title || 'blank'}}</div>
+			<div class="com-block-bar-right">
+				<slot name="more"></slot>
+			</div>
 		</div>
 		<div class="com-block-content">
 			<slot></slot>
 		</div>
+		
 	</div>
 </template>
 
@@ -20,7 +24,9 @@
 		overflow auto
 		&-bar
 			background #fff
-			padding 1em
+			padding 0 1em
+			height 90px
+			line-height 90px
 			text-align center
 			position sticky
 			top 0

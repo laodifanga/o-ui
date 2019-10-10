@@ -7,14 +7,10 @@ const VueLoaderPlugin = require('vue-loader/lib/plugin.js')
 const autoprefixer = require('autoprefixer')
 const postcssPxToViewport = require('postcss-px-to-viewport')
 
-// 组件入口目录 生成entry {pager: './src/components/pager/index.js',...}
-const fs = require('fs')
-let componentsEntry = ((dirname = './src/components') => {
-	let dirs = fs.readdirSync(dirname).filter( f => fs.statSync(join(dirname, f)).isDirectory() )
-	let entrys = {}
-	dirs.map( dir => entrys[dir] = `${dirname}/${dir}/index.js`)
-	return entrys
-})()
+
+componentsEntry = {
+  directive: './src/directive/index.js'
+}
 
 module.exports = {
 	mode: 'production',
@@ -25,18 +21,18 @@ module.exports = {
 	
 	output: {
 		// filename: '[name][chunkhash:4].js',
-		filename: '[name]/index.js',
+		filename: 'directive.js',
 		path: resolve(__dirname, './lib'),
 		publicPath: '/',
 		libraryTarget: 'umd',
 		chunkFilename: '[name].chunk.js', // 三方 chunk 的名称
 	},
 	
-	// optimization:{ // 代码分离 vue 等 js块
-	// 	splitChunks:{
-	// 		chunks:'all' // initial(初始块)、async(按需加载块)、all(全部块)
-	// 	}
-	// },
+	optimization:{ // 代码分离 vue 等 js块
+		splitChunks:{
+			chunks:'all' // initial(初始块)、async(按需加载块)、all(全部块)
+		}
+	},
 	
 	// 配置loader
 	module: {
@@ -115,8 +111,7 @@ module.exports = {
 		// new CleanWebpackPlugin(), // 清空
 		
 		new MiniCssExtractPlugin({
-		  filename: "[name]/style.css",
-		  // chunkFilename: "[name]/style.css"
+		  filename: "directive.css",
 		}),
 		new VueLoaderPlugin(),
 	]

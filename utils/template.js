@@ -30,12 +30,39 @@ main.install = (Vue) => {
 export default main`,
 	
 	// style模板
-	styleTemplate: name => `.o-${name}`,
+	styleTemplate: name => `.o-${name}
+	// css`,
+	
+	// readme.md 模板
+	readmeTemplate: name => `## ${name}
+---
+
+> props
+
+参数 | 类型 | 默认值 | 说明
+--- | --- | --- | ---
+xxx | - | - | -
+
+
+> slot
+
+名称 | scope | 说明
+--- | --- | ---
+default | - | -
+
+> emit
+
+事件名称 | 说明
+--- | --- |
+xxx | -
+`,
 	
 	// 示例模板
-	demoVueTemplate: name => {
+	demoVueTemplate: (name, dir) => {
 		return `<template>
 	<block>
+		<a color="main" href="https://github.com/laodifanga/o-ui/blob/master/demo/router/pages/${dir}/${name}.vue" slot="more">源码</a>
+		
 		<demo>
 			${name}
 		</demo>

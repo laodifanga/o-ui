@@ -1,10 +1,9 @@
 import { version, prefix } from '../package.json'
 
-import panel from './components/panel'
 import pager from './components/pager'
 
 let components = [
-	panel, pager,
+	pager,
 ]
 
 import './style.styl'
@@ -18,7 +17,7 @@ if (typeof window !== 'undefined' && window.Vue) install(window.Vue)
 
 // demo用
 export {
-	panel, pager,
+	pager,
 }
 
 export default { install, version }
