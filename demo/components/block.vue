@@ -29,6 +29,7 @@
 			line-height 90px
 			text-align center
 			position sticky
+			z-index 1
 			top 0
 			display flex
 			&-title
