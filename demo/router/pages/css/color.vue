@@ -14,6 +14,12 @@
 				<div style="width:35%" gap="p20 m4" :color="`bg${c} ${~['border', ,'line', 'bg', 'white'].indexOf(c) ? 'cont' : 'white'}`" v-for="c in baseColor.split(',')">{{c}}</div>
 			</div>
 		</demo>
+
+		<demo title="bg+">
+			<div row="wrap aic jcc">
+				<div style="width:35%" gap="p20 m4" :color="`bg+ bg${c} ${c}`" v-for="c in baseColor.split(',')">{{c}}</div>
+			</div>
+		</demo>
 	</block>
 </template>
 	

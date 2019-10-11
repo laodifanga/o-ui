@@ -34,8 +34,16 @@
   to
     transform rotate(360deg)
 @keyframes oFade
-  from
+  50%
     opacity 0
-[spin]
-  display inline-block
+@keyframes oZoom
+  50%
+    transform scale(1.2)
+[o-spin]
   animation oSpin ($transTime * 4) infinite linear
+
+[o-fade]
+  animation oFade ($transTime * 4) infinite linear
+
+[o-zoom]
+  animation oZoom ($transTime * 4) infinite linear

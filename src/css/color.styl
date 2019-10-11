@@ -1,9 +1,17 @@
+// main info success warning fail black title cont desc disabled border line bg white 
 :root {
 	--main: #327ede;
 	--info: #2db6e8;
 	--success: #42b983;
 	--warning: #ff9800;
 	--fail: #f44336;
+
+	--l_main: #e6eff9;
+	--l_info: #f0faff;
+	--l_success: #edfff3;
+	--l_warning: #fff9e6;
+	--l_fail: #ffefe6;
+
 	--black: #333;
 	--title: #16233e;
 	--cont: #4f596e;
@@ -13,6 +21,15 @@
 	--line: #e9ebec;
 	--bg: #f8f8f8;
 	--white: #fff;
+
+	--l_black: #eee;
+	--l_title: #d7e4ff;
+	--l_cont: #d2def5;
+	--l_desc: #e4ebff;
+	--l_disabled: #f2f6ff;
+	--l_border: #fafbff;
+	--l_line: #f4f5f5;
+	--l_bg: #fbfbfb;
 }
 
 [color~='bgmain'] { background: var(--main) }
@@ -30,7 +47,6 @@
 [color~='bgbg'] { background: var(--bg) }
 [color~='bgwhite'] { background: var(--white) }
 
-
 [color~='main'] { color: var(--main) }
 [color~='info'] { color: var(--info) }
 [color~='success'] { color: var(--success) }
@@ -45,3 +61,34 @@
 [color~='line'] { color: var(--line) }
 [color~='bg'] { color: var(--bg) }
 [color~='white'] { color: var(--white) }
+
+[color~='bg+']
+	&[color~='bgmain'] { background: var(--l_main) }
+	&[color~='bginfo'] { background: var(--l_info) }
+	&[color~='bgsuccess'] { background: var(--l_success) }
+	&[color~='bgwarning'] { background: var(--l_warning) }
+	&[color~='bgfail'] { background: var(--l_fail) }
+	&[color~='bgblack'] { background: var(--l_black) }
+	&[color~='bgtitle'] { background: var(--l_title) }
+	&[color~='bgcont'] { background: var(--l_cont) }
+	&[color~='bgdesc'] { background: var(--l_desc) }
+	&[color~='bgdisabled'] { background: var(--l_disabled) }
+	&[color~='bgborder'] { background: var(--l_border) }
+	&[color~='bgline'] { background: var(--l_line) }
+	&[color~='bgbg'] { background: var(--l_bg) }
+	&[color~='bgwhite'] { background: var(--l_white) }
+
+[color~='+']
+	&[color~='main'] { color: var(--l_main) }
+	&[color~='info'] { color: var(--l_info) }
+	&[color~='success'] { color: var(--l_success) }
+	&[color~='warning'] { color: var(--l_warning) }
+	&[color~='fail'] { color: var(--l_fail) }
+	&[color~='black'] { color: var(--l_black) }
+	&[color~='title'] { color: var(--l_title) }
+	&[color~='cont'] { color: var(--l_cont) }
+	&[color~='desc'] { color: var(--l_desc) }
+	&[color~='disabled'] { color: var(--l_disabled) }
+	&[color~='border'] { color: var(--l_border) }
+	&[color~='line'] { color: var(--l_line) }
+	&[color~='bg'] { color: var(--l_bg) }

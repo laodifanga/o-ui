@@ -1,7 +1,7 @@
 $shadow-color = rgba(0,0,0,.1)
 
-$bottom = 28px
-$deg = 14deg
+$bottom = 50px
+$deg = 16deg
 [shadow]
   box-shadow 0 12px 16px $shadow-color
 
@@ -18,7 +18,7 @@ $deg = 14deg
     height 35%
     bottom $bottom
     background transparent
-    box-shadow 0 ($bottom / 1.15) ($bottom / 1.5) rgba(0, 0, 0, .25)
+    box-shadow 0 ($bottom / 1.2) ($bottom / 1.5) rgba(0, 0, 0, .25)
 
   &:before
     left 5%
@@ -30,7 +30,7 @@ $deg = 14deg
   &[shadow~='c']
     box-shadow none
     &:before, &:after
-      box-shadow 0 ($bottom / 1.15) ($bottom / 1.5) currentColor
+      box-shadow 0 ($bottom / 1.2) ($bottom / 1.5) currentColor
 
 
 [shadow~='bg']
@@ -46,6 +46,6 @@ $deg = 14deg
     height 100%
 
   &:before
-    top 12%
+    top 12px
     filter blur(12px) brightness(88%) opacity(.88)
-    transform scale(.95)
+    transform scale(1.01)

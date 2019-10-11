@@ -17,6 +17,7 @@
 	.com-demo
 		&-title
 			position sticky
+			z-index 1
 			top 90px
 			background var(--line)
 			font-size 28px

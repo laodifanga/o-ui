@@ -1,5 +1,5 @@
 // -------------- 间隔 text="12 14 16 20 24 28 32 36 40 48 56 64 72"
-sizes = 12 14 16 20 24 28 32 36 40 48 56 64 72
+sizes = 12 13 14 16 20 24 28 32 36 40 48 56 64 72
 for n,i in sizes
   [text~=\'{n}\']
     if n == 12
@@ -8,7 +8,7 @@ for n,i in sizes
       font-size n * 2px
 [text~='sm']
   display inline-block
-  font-size 12px
+  font-size 12px * 2
   transform scale(.85)
   transform-origin left center
 
@@ -17,8 +17,8 @@ for n,i in sizes
 [text~=i]
   font-style italic
 
-[text~=ss]
-  font-family PingFang SC,STHeitiSC-Light,Helvetica-Light,arial,sans-serif
+// [text~=ss]
+//   font-family "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif
 
 [text~='tl']
   text-align left
@@ -35,7 +35,9 @@ for n,i in sizes
   vertical-align middle
 
 [text~='ell']
-  ell()
+  overflow hidden
+  white-space nowrap
+  text-overflow ellipsis
 [text~='ell2'] {
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -60,6 +62,8 @@ for n,i in sizes
 [text~='wrap']
   word-wrap break-word
   word-break break-all
+[text~='nowrap']
+  white-space nowrap
 
 [text~='c']
   text-transform capitalize

@@ -9,8 +9,8 @@ import oUi, {pager} from './../src'
 Vue.use(oUi)
 
 
-import {directive_pager} from '../src/directive/index'
-console.log(directive_pager)
+// import {directive_pager} from '../src/directive/index'
+// console.log(directive_pager)
 
 import Block from '@/components/block'
 import Demo from '@/components/demo'

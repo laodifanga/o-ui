@@ -29,11 +29,14 @@
 			line-height 90px
 			text-align center
 			position sticky
-			z-index 1
+			z-index 2
 			top 0
 			display flex
 			&-title
 				flex 1
+			&-right
+				a
+					text-decoration none
 		&-content
 			background none
 </style>

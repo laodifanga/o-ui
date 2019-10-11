@@ -67,6 +67,12 @@
 		    <button btn radius="100" color="bgmain white">分组</button>
 		  </div>
 		</Demo>
+
+		<Demo title="结合color">
+			<span v-for="c in color.split(' ')" gap="m4" btn="fit" :color="`bg${c} ${c} +`">{{c}}</span>
+ 			<span v-for="c in color.split(' ')" gap="m4" btn="fit plat" radius :color="`${c}`">{{c}}</span>
+ 			<span v-for="c in color.split(' ')" gap="m4" btn="fit plat" radius="100" :color="`bg+ bg${c} ${c}`">{{c}}</span>
+		</Demo>
 	</block>
 </template>
 
@@ -76,7 +82,9 @@
 		
 		data() {
 		  return {
-		    src: 'http://thirdwx.qlogo.cn/mmopen/vi_32/82ypiarh4VEHapO9g7619xiao4KBfEAe6oVXWKkXYTbvdY5tOLQX0cNHVaBO6g9TJNFrYWDvGwgvPicBZTp615mjA/132'
+				src: 'http://thirdwx.qlogo.cn/mmopen/vi_32/82ypiarh4VEHapO9g7619xiao4KBfEAe6oVXWKkXYTbvdY5tOLQX0cNHVaBO6g9TJNFrYWDvGwgvPicBZTp615mjA/132',
+				
+				color: 'main info success warning fail black title cont desc disabled border',
 		  }
 		}
 	}

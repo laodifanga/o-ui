@@ -15,12 +15,12 @@
 					<div row="aic jcc" class="loadingOut">
 	
 						<template v-if="autoLoad">
-							<span v-if="isBusy" >loading</span>
+							<span v-if="isBusy" loading></span>
 							<span color="desc" v-else-if="scrolled">上拉加载更多</span>
 						</template>
 	
 						<template v-else>
-							<span v-if="isBusy" >loading</span>
+							<span v-if="isBusy" loading></span>
 							<span btn color="bgbg" @click="notAutoLoad" v-else>加载更多</span>
 						</template>
 					</div>
