@@ -4,7 +4,7 @@
 
 			<template v-if="isDone">
 				<slot name="done" :lock="lock">
-					<div v-if="isDone" text="tc" color="desc" class="o-pager-done">
+					<div v-if="isDone" text="tc" color="desc" class="o-pager__done">
 						─ 数据加载完毕 ─
 					</div>
 				</slot>
@@ -12,7 +12,7 @@
 	
 			<template v-else-if="$listeners && $listeners.next">
 				<slot name="loading" :busy="{isBusy, scrolled}">
-					<div row="aic jcc" class="o-pager-loadingout">
+					<div row="aic jcc" class="o-pager__loadingout">
 	
 						<template v-if="autoLoad">
 							<span v-if="isBusy" loading></span>

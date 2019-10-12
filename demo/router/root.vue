@@ -1,44 +1,32 @@
 <template>
-	<div>
-		<div class="o-root">
-			o-root
+	<div class="root">
+		<div class="intro" text="tc" color="bgmain white">
+			<img :src="src" class="intro-logo">
+			<div class="intro-name" text="24">
+				OUI
+			</div>
 		</div>
-
-		<div class="o-root act">
-			o-root
-		</div>
-
-
-		<div class="root">
-			<div class="intro" text="tc" color="bgmain white">
-				<img :src="src" class="intro-logo">
-				<div class="intro-name" text="24">
-					OUI
+		
+		<details details v-for="d,name,i in data" :key="i" open>
+			<summary color="white" class="sticky">
+				<div gap="p12" text="16" color="bgmain">{{name | magicName}}</div>
+			</summary>
+			
+			<div class="list" v-for="l in d" color="title">
+				<div gap="p12" row @click="$router.push({path: l.path})">
+					<span text="16" col="1">{{l.name}}</span>
+					<span text="14" color="desc" gap="mr8">{{l.desc}}</span> <span color="desc" arrow></span>
 				</div>
 			</div>
-			
-			<details details v-for="d,name,i in data" :key="i" open>
-				<summary color="white" class="sticky">
-					<div gap="p12" text="16" color="bgmain">{{name | magicName}}</div>
-				</summary>
-				
-				<div class="list" v-for="l in d" color="title">
-					<div gap="p12" row @click="$router.push({path: l.path})">
-						<span text="16" col="1">{{l.name}}</span>
-						<span text="14" color="desc" gap="mr8">{{l.desc}}</span> <span color="desc" arrow></span>
-					</div>
-				</div>
-			</details>
-			
-			
-			<keep-alive>
-				<transition name="o-move-right">
-					<router-view class="child-view"></router-view>
-				</transition>
-			</keep-alive>
-		</div>
+		</details>
+		
+		
+		<keep-alive>
+			<transition name="o-move-right">
+				<router-view class="child-view"></router-view>
+			</transition>
+		</keep-alive>
 	</div>
-	
 </template>
 
 <script>
@@ -83,20 +71,4 @@
 	.sticky
 		position: sticky; 
 		top: 0;
-</style>
-
-
-<style lang="stylus">
-	.o {
-		&-root {
-			background: #000;
-			&__act {
-				background: red;
-			}
-			&.act {
-				background: green;
-			}
-		}
-	}
-	
 </style>

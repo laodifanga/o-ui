@@ -30,7 +30,7 @@ main.install = (Vue) => {
 export default main`,
 	
 	// style模板
-	styleTemplate: name => `// ${name}: block-name__element--modifier
+	styleTemplate: name => `// ${prefix.toLowerCase()}__element--modifier
 .${prefix.toLowerCase()}
 	&-${name}
 		// css`,
