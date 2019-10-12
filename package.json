@@ -1,6 +1,6 @@
 {
   "name": "o-ui-ldf",
-	"description": "OUI移动端VUE前端UI库 A mobile UI components Library with Vue.js",
+  "description": "OUI移动端VUE前端UI库 A mobile UI components Library with Vue.js",
   "prefix": "O",
   "version": "0.2.3",
   "author": "laodifang <47121862@qq.com>",
@@ -29,7 +29,7 @@
     "new:c": "node utils/createComponent.js",
     "new:demo": "node utils/createDemo.js",
     "lint": "vue-cli-service lint",
-		"pub": "npm publish --registry http://registry.npmjs.org"
+    "pub": "npm publish --registry http://registry.npmjs.org"
   },
   "dependencies": {
     "core-js": "^2.6.5",

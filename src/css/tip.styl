@@ -1,5 +1,9 @@
 $rd = .4em
 
+@keyframes tipFade
+  0%
+    opacity 0
+
 [tip]
   position relative
   &[open]
@@ -24,7 +28,7 @@ $rd = .4em
   &:active, &:hover
     &:after
       display block
-      animation oFade .25s
+      animation tipFade $transTime
 
   &[place='t'] { &:after {left: 50%; border-radius $rd } }
   &[place='tl'] { &:after {left: 0; transform: none; bottom: calc(100% + 4px); border-radius $rd $rd $rd 0 } }
