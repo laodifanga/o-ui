@@ -1,7 +1,7 @@
 <template>
 	<div class="root">
 		<div class="intro" text="tc" color="bgmain white">
-			<img :src="src" class="intro-logo">
+			<img src="logo.png" class="intro-logo">
 			<div class="intro-name" text="24">
 				OUI
 			</div>
@@ -44,8 +44,7 @@
 		
 		data() {
 			return {
-				data,
-				src: 'http://thirdwx.qlogo.cn/mmopen/vi_32/82ypiarh4VEHapO9g7619xiao4KBfEAe6oVXWKkXYTbvdY5tOLQX0cNHVaBO6g9TJNFrYWDvGwgvPicBZTp615mjA/132'
+				data
 			}
 		},
 	}

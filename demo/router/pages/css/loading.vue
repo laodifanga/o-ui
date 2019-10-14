@@ -32,7 +32,7 @@
 
 		data() {
 			return {
-				size: ['s', 'm', '', 'l']
+				size: ['s', 'm', 'l']
 			}
 		}
 	}

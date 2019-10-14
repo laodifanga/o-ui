@@ -16,8 +16,7 @@
 		
 		<Demo title="按钮尺寸 s m l">
 			<span gap="m4" btn="fit s">s</span>
-			<span gap="m4" btn="fit m">m</span>
-			<span gap="m4" btn="fit">默认</span>
+			<span gap="m4" btn="fit m">m 默认</span>
 			<span gap="m4" btn="fit l">l</span>
 		</Demo>
 		
@@ -70,9 +69,9 @@
 		</Demo>
 
 		<Demo title="结合color">
-			<span v-for="c in color.split(' ')" gap="m4" btn="fit" :color="`bg${c} ${c} +`">{{c}}</span>
- 			<span v-for="c in color.split(' ')" gap="m4" btn="fit plat" radius :color="`${c}`">{{c}}</span>
- 			<span v-for="c in color.split(' ')" gap="m4" btn="fit plat" radius="100" :color="`bg+ bg${c} ${c}`">{{c}}</span>
+			<span v-for="c in color.split(' ')" gap="m4" btn="fit" :color="`bg${c} ${c} +`">按钮</span>
+ 			<span v-for="c in color.split(' ')" gap="m4" btn="fit plat" radius :color="`${c}`">btn</span>
+ 			<span v-for="c in color.split(' ')" gap="m4" btn="fit plat" radius="100" :color="`bg+ bg${c} ${c}`">BTN</span>
 		</Demo>
 	</block>
 </template>

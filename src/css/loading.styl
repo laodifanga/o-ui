@@ -1,16 +1,15 @@
 
 
 [loading]
-  $default = 2rem
-  $s = 1rem
-  $m = 1.5rem
-  $l = 3rem
+  // $s = 1.25rem
+  // $m = 2rem
+  // $l = 3rem
   display inline-block
-  width $default
-  height $default
+  width $m
+  height $m
   border 6px solid rgba(150,150,150,.5)
   border-top-color currentColor
-  vertical-align -($default / 3)
+  vertical-align -($m / 3)
   border-radius 100%
   box-sizing border-box
   animation oSpin $transTime * 2 linear infinite
@@ -20,13 +19,8 @@
   &[loading~='s']
     width $s
     height $s
-    vertical-align -($s / 4)
-    border-width 2px
-  &[loading~='m']
-    width $m
-    height $m
-    vertical-align -($m / 3.5)
-    border-width 4px
+    vertical-align -($s / 5)
+    border-width 3px
   &[loading~='l']
     width $l
     height $l

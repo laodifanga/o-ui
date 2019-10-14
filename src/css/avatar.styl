@@ -1,31 +1,33 @@
 @import '../base'
 
+
+
 [avatar] {
   display: inline-block;
   overflow: hidden;
   white-space: nowrap;
-  width: 80px;
-  height: 80px;
-  line-height: 80px;
+  width: $m;
+  height: $m;
+  line-height: $m;
   text-align: center;
   z-index: 1;
 	background: var(--bg, grey);
 }
 
 [avatar~=s]
-  width 56px
-  height 56px
-  line-height 56px
+  width $s
+  height $s
+  line-height $s
 
-[avatar~=m]
-  width 112px
-  height 112px
-  line-height 112px
+// [avatar~=m]
+//   width 112px
+//   height 112px
+//   line-height 112px
 
 [avatar~=l]
-  width 144px
-  height 144px
-  line-height 144px
+  width $l
+  height $l
+  line-height $l
 
 [avatar~=group]
   width auto
@@ -36,31 +38,35 @@
     display block
     border 1px solid rgba(255,255,255,.75)
     &:not(:first-child)
-      margin-left -32px
+      margin-left -($m / 3)
+    &:first-child
+      margin-left 0
   [avatar~=s]
     &:not(:first-child)
-      margin-left -24px
-  [avatar~=m]
-    &:not(:first-child)
-      margin-left -48px
+      margin-left -($s / 2)
   [avatar~=l]
     &:not(:first-child)
-      margin-left -64px
+      margin-left -($l / 3.5)
 
 [avatar~=reverse]
   justify-content flex-end
   direction rtl
   unicode-bidi bidi-override
   [avatar]
-    margin-left -32px
+    margin-left -($m / 3)
     &:last-child
-      margin-left 0px
+      margin-left 0
+    &:first-child
+      margin-left -($m / 3)
+    
   [avatar~=s]
-    margin-left -24px
-  [avatar~=m]
-    margin-left -48px
+    margin-left -($s / 2)
+    &:first-child
+      margin-left -($s / 2)
   [avatar~=l]
-    margin-left -64px
+    margin-left -($l / 3.5)
+    &:first-child
+      margin-left -($l / 3.5)
 [avatar~=hover]
   [avatar]
     &:hover

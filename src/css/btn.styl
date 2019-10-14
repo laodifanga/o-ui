@@ -1,11 +1,11 @@
 [btn]
   display inline-block
   padding 0 24px
-  height 64px
+  height $m
   margin-bottom 0
   font-size inherit
   font-weight 400
-  line-height (64 / 28) // height / fontsize
+  line-height $m // height / fontsize
   text-align center
   white-space nowrap
   vertical-align middle
@@ -27,33 +27,29 @@
 
 // 格式化最小宽度
 [btn~='fit']
-  min-width 5.5em
+  min-width ($m * 2)
   &[btn~='s']
-    min-width 4em
-  &[btn~='m']
-    min-width 5em
+    min-width $s * 2
   &[btn~='l']
-    min-width 6em
+    min-width $l * 2
 
-// [btn~='s']
-//   font-size 75%
   
 
 [btn~='s']
   padding 0 20px
   font-size 24px
-  height 40px
-  line-height (40 / 24)
-[btn~='m']
-  padding 0 24px
-  height 56px
-  font-size 26px
-  line-height (56 / 26)
+  height $s
+  line-height $s
+// [btn~='m']
+//   padding 0 24px
+//   height 56px
+//   font-size 26px
+//   line-height (56 / 26)
 [btn~='l']
   padding 0 48px
-  height 96px
+  height $l
   font-size 32px
-  line-height (96 / 32)
+  line-height $l
 
 [btn~='block']
   display block
@@ -119,9 +115,7 @@ icoSize($size = 62px)
       transform scale(.75)
 
   &[btn~='s']
-    icoSize(28px)
-  &[btn~='m']
-    icoSize(48px)
+    icoSize($s)
   &[btn~='l']
-    icoSize(96px)
+    icoSize($l)
 

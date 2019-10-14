@@ -1,31 +1,21 @@
 <template>
 	<div class="o-pager">
-			<slot></slot>
-
-			<template v-if="isDone">
-				<slot name="done" :lock="lock">
-					<div v-if="isDone" text="tc" color="desc" class="o-pager__done">
-						─ 数据加载完毕 ─
-					</div>
-				</slot>
-			</template>
-	
-			<template v-else-if="$listeners && $listeners.next">
-				<slot name="loading" :busy="{isBusy, scrolled}">
-					<div row="aic jcc" class="o-pager__loadingout">
-	
-						<template v-if="autoLoad">
-							<span v-if="isBusy" loading></span>
-							<span color="desc" v-else-if="scrolled">上拉加载更多</span>
-						</template>
-	
-						<template v-else>
-							<span v-if="isBusy" loading></span>
-							<span btn color="bgbg" @click="notAutoLoad" v-else>加载更多</span>
-						</template>
-					</div>
-				</slot>
-			</template>
+      <slot></slot>
+      
+      <div v-if="isOpenNext" class="o-pager__next">
+        <template v-if="isDone">
+          <slot name="done">{{text.done}}</slot>
+        </template>
+        <template v-else>
+          <slot name="loading" v-bind="{busy: isBusy, scrolled}">
+            <span v-if="isBusy" >
+              <span loading="s"></span>
+              {{text.loading}}
+            </span>
+            <span color="desc" v-else-if="scrolled">{{text.preload}}</span>
+          </slot>
+        </template>
+      </div>
 	</div>
 </template>
 
@@ -38,22 +28,33 @@
 
 		props: {
 			data: '',
-			
-      autoLoad: { // 是否自动加载
-        default: true
-      },
       
       threshold: { // 距离底部
         type: [Number, String],
-        default: 5
+        default: 1
 			},
 			
       autoScrollToBottom: {
         default: false
+      },
+
+      text: {
+        type: Object,
+        default() {
+          return {
+            preload: '上拉显示更多',
+            loading: '正在加载…',
+            done: '─ 没有更多数据了 ─',
+          }
+        }
       }
 		},
 		
     computed: {
+      isOpenNext() { // 是否开启加载更多
+        return this.$listeners && this.$listeners.next
+      },
+
       isBusy() {
         return !this.disabled && !this.lock && this.busy
 			},
@@ -125,7 +126,7 @@
           this.scrolled = true
         }
         this.$emit('scroll', e, getScrollRect(this.page, this.threshold))
-        if(this.busy || this.lock || !this.autoLoad) return
+        if(this.busy || this.lock) return
 
         let {isBottom} = getScrollRect(this.page, this.threshold)
         if(isBottom) {
@@ -133,13 +134,6 @@
           this.autoScrollToBottom && this.scrollToBottom(this.page)
           this.$emit('next', this.done)
         }
-      },
-
-      notAutoLoad() {
-        if(this.busy || this.lock) return
-
-        this.busy = true
-        this.$emit('next', this.done)
       },
 
       scrollTo(x = 0, y = 0) {
