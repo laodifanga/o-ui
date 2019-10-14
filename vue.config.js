@@ -16,6 +16,7 @@ module.exports = {
 	chainWebpack: config => {
 		config.resolve.alias
 			.set('@', resolve('demo'))
+			.set('src', resolve('src'))
 	}
 	
 	// // 扩展 webpack 配置，使 src 加入编译

@@ -1,10 +1,11 @@
 [btn]
   display inline-block
-  padding 12px 24px
+  padding 0 24px
+  height 64px
   margin-bottom 0
   font-size inherit
   font-weight 400
-  line-height 1.42857143
+  line-height (64 / 28) // height / fontsize
   text-align center
   white-space nowrap
   vertical-align middle
@@ -26,26 +27,33 @@
 
 // 格式化最小宽度
 [btn~='fit']
-  min-width 5em
+  min-width 5.5em
   &[btn~='s']
     min-width 4em
   &[btn~='m']
-    min-width 4.5em
+    min-width 5em
   &[btn~='l']
     min-width 6em
 
-[btn~='s'],[btn~='m']
-  font-size 75%
+// [btn~='s']
+//   font-size 75%
+  
 
 [btn~='s']
-  padding 1px 10px
-  line-height 1.333333
+  padding 0 20px
+  font-size 24px
+  height 40px
+  line-height (40 / 24)
 [btn~='m']
-  padding 12px 24px
+  padding 0 24px
+  height 56px
+  font-size 26px
+  line-height (56 / 26)
 [btn~='l']
-  padding 24px 36px
-  font-size 36px
-  line-height 1.3333333
+  padding 0 48px
+  height 96px
+  font-size 32px
+  line-height (96 / 32)
 
 [btn~='block']
   display block

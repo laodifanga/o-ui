@@ -10,7 +10,8 @@
 		  <span gap="m4" btn="plat" radius="8">radius</span>
 		  <span gap="m4" btn="plat ico" radius="100">ico</span>
 		  <span gap="m4" btn="text">text</span>
-		  <span gap="m4" btn="block">block</span>
+		  <span gap="mt4" btn="block">block</span>
+		  <span gap="mt4" btn="block l">立即订购</span>
 		</Demo>
 		
 		<Demo title="按钮尺寸 s m l">

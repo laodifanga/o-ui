@@ -1,4 +1,4 @@
-$rd = .4em
+$rd = .3em
 
 @keyframes tipFade
   0%
@@ -15,29 +15,30 @@ $rd = .4em
     position absolute
     z-index 1
     left 50%
-    bottom calc(100% + 4px)
+    bottom calc(100% + 8px)
     transform translateX(-50%)
     // background rgba(0,0,0,.8)
     background var(--main)
     color var(--l_main)
-    font-size 24px
+    opacity .9
+    font-size 75%
     border-radius $rd
     line-height 1
-    padding 6px 12px
+    padding 5px 12px
     display none
   &:active, &:hover
     &:after
       display block
       animation tipFade $transTime
 
-  &[place='t'] { &:after {left: 50%; border-radius $rd } }
-  &[place='tl'] { &:after {left: 0; transform: none; bottom: calc(100% + 4px); border-radius $rd $rd $rd 0 } }
+  // &[place='t'] { &:after {left: 50%; border-radius $rd } }
+  &[place='tl'] { &:after {left: 0; transform: none; bottom: calc(100% + 8px); border-radius $rd $rd $rd 0 } }
   &[place='tr'] { &:after {left: auto; right: 0; transform: none; border-radius $rd $rd 0 $rd } }
 
-  &[place='b'] { &:after {bottom: auto; top: calc(100% + 4px); left: 50%; border-radius $rd } }
-  &[place='bl'] { &:after {bottom: auto; left: 0; transform: none;  top: calc(100% + 4px); border-radius 0 $rd $rd $rd} }
-  &[place='br'] { &:after {bottom: auto; transform: none; top: calc(100% + 4px); left: auto; right: 0; border-radius $rd 0 $rd $rd } }
+  &[place='b'] { &:after {bottom: auto; top: calc(100% + 8px); left: 50%; border-radius $rd } }
+  &[place='bl'] { &:after {bottom: auto; left: 0; transform: none;  top: calc(100% + 8px); border-radius 0 $rd $rd $rd} }
+  &[place='br'] { &:after {bottom: auto; transform: none; top: calc(100% + 8px); left: auto; right: 0; border-radius $rd 0 $rd $rd } }
 
-  &[place='cl'] { &:after {right: calc(100% + 4px); bottom: auto; left: auto; top: 50%; transform: translateY(-50%); border-radius $rd } }
-  &[place='cr'] { &:after {left: calc(100% + 4px); bottom: auto; top: 50%; transform: translateY(-50%); border-radius $rd } }
+  &[place='cl'] { &:after {right: calc(100% + 8px); bottom: auto; left: auto; top: 50%; transform: translateY(-50%); border-radius $rd } }
+  &[place='cr'] { &:after {left: calc(100% + 8px); bottom: auto; top: 50%; transform: translateY(-50%); border-radius $rd } }
 

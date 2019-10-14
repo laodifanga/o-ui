@@ -23,7 +23,7 @@
 		data() {
 		  return {
 		    borders: [
-		      '', 't', 'r', 'b', 'l', 'c', 'c t', 'c r', 'c b', 'c l'
+		      '', 'line', 't', 'r', 'b', 'l', 'c', 'c t', 'c r', 'c b', 'c l'
 		    ]
 		  }
 		}

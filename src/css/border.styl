@@ -7,6 +7,8 @@
   border-style dashed
 [border~='dotted']
   border-style dotted
+[border~='line']
+  border-color var(--line)
 
 [border~='t'],
 [border~='r'],
@@ -16,12 +18,21 @@
 
 [border~='t']
   border-top-color var(--border)
+  &[border~='line']
+    border-top-color var(--line)
+
 [border~='r']
   border-right-color var(--border)
+  &[border~='line']
+    border-right-color var(--line)
 [border~='b']
   border-bottom-color var(--border)
+  &[border~='line']
+    border-bottom-color var(--line)
 [border~='l']
   border-left-color var(--border)
+  &[border~='line']
+    border-left-color var(--line)
 
 [border~='c']
   &[border~='t']

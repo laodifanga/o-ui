@@ -9,7 +9,7 @@
 		
 		<details details v-for="d,name,i in data" :key="i" open>
 			<summary color="white" class="sticky">
-				<div gap="p12" text="16" color="bgmain">{{name | magicName}}</div>
+				<div gap="p12" text="16" color="bgfail">{{name | magicName}}</div>
 			</summary>
 			
 			<div class="list" v-for="l in d" color="title">
@@ -54,6 +54,7 @@
 <style lang="stylus" scoped>
 	.child-view
 		position: fixed;
+		z-index: 1;
 		top: 0;
 		left: 0;
 		width 100%
@@ -63,12 +64,16 @@
 		
 	.intro
 		padding 2em 0
+		overflow hidden
+		background: var(--black);
 		&-logo
 			width 150px
 			height 150px
 		&-name
 			padding 1em 0 0 0
+
 	.sticky
 		position: sticky; 
+		z-index: 1;
 		top: 0;
 </style>

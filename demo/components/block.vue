@@ -1,6 +1,6 @@
 <template>
 	<div class="com-block">
-		<div class="com-block-bar">
+		<div class="com-block-bar igbar">
 			<div class="com-block-bar-back" @click="$router.back()"><span arrow="l"></span></div>
 			<div class="com-block-bar-title" color="title">{{$route.meta && $route.meta.title || 'blank'}}</div>
 			<div class="com-block-bar-right">
@@ -39,4 +39,8 @@
 					text-decoration none
 		&-content
 			background none
+
+		.igbar
+			height 45px
+			line-height 45px
 </style>

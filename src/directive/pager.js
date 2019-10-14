@@ -9,7 +9,7 @@ export default {
     el.scrollListener = (e) => {
       if(el.getAttribute('busy')) return
 
-      let {isBottom} = getScrollRect(e.target, +attrs.distance || 5)
+      let {isBottom} = getScrollRect(e.target, +attrs.threshold || 5)
       if(isBottom)  expression(e)
     }
 
