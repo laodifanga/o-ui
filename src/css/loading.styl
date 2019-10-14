@@ -1,28 +1,28 @@
 
 
 [loading]
-  // $s = 1.25rem
-  // $m = 2rem
-  // $l = 3rem
+  $s = 1.25rem
+  $m = 2rem
+  $l = 3rem
   display inline-block
   width $m
   height $m
-  border 6px solid rgba(150,150,150,.5)
+  border ($m / 10) solid rgba(150,150,150,.5)
   border-top-color currentColor
   vertical-align -($m / 3)
   border-radius 100%
   box-sizing border-box
   animation oSpin $transTime * 2 linear infinite
   &[loading~='flip']
-    border 6px solid currentColor
+    border ($m / 10) solid currentColor
     border-top-color rgba(150,150,150,.5)
   &[loading~='s']
     width $s
     height $s
     vertical-align -($s / 5)
-    border-width 3px
+    border-width ($s / 10)
   &[loading~='l']
     width $l
     height $l
     vertical-align -($l / 2.75)
-    border-width 8px
+    border-width ($l / 10)
