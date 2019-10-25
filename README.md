@@ -63,6 +63,7 @@ Vue.directive('pager', directive_pager)
 ## 日志
 - 0.2.3
 	- 新增directive[pager]
+	- 基础css完成
 - 0.2.2
 	- 新增 css[avatar, broder, btn, color, gap]
 	- 新增组件 pager

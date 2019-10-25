@@ -1,9 +1,11 @@
 import { version, prefix } from '../package.json'
 
 import pager from './components/pager'
+import swiper from './components/swiper'
+import swiperItem from './components/swiper-item'
 
 let components = [
-	pager,
+	pager, swiper, swiperItem
 ]
 
 import './style.styl'
@@ -17,7 +19,7 @@ if (typeof window !== 'undefined' && window.Vue) install(window.Vue)
 
 // demo用
 export {
-	pager,
+	pager, swiper, swiperItem
 }
 
 export default { install, version }

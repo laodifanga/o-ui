@@ -1,0 +1,29 @@
+// o__element--modifier
+.o
+	&-swiper
+		overflow hidden
+		position relative
+		height 100%
+		&__frame
+			white-space nowrap
+			height 100%
+			will-change transform
+			&--vertical
+				white-space normal
+		&__dots
+			position absolute
+			bottom 0
+			left 0
+			width 100%
+			display flex
+			align-items center
+			justify-content center
+			padding .5em
+			.items
+				padding 10px
+				border-radius 10px
+				font-size 0
+				background rgba(0,0,0,.25)
+				margin 4px
+				&--act
+					background var(--main)

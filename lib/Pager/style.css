@@ -1,7 +1,12 @@
-.o-pager .pagerDone,
-.o-pager .loadingOut {
-  background: rgba(0, 0, 0, 0.05);
+.o-pager__done,
+.o-pager__loadingout {
   height: 10.667vw;
   line-height: 10.667vw;
+}
+.o-pager__next {
+  height: 2em;
+  line-height: 2em;
+  text-align: center;
+  color: var(--desc);
 }
 
