@@ -43,6 +43,9 @@
 			},
 			autoPlay: {
 				default: false
+			},
+			duration: {
+				default: 250
 			}
 		},
 
@@ -90,7 +93,8 @@
 		},
 
 		methods: {
-			moveTo(index, duration = DURATION) {
+			moveTo(index) {
+				if(this._animating) return
 				this.index = index
 				this._caclIndex()
 			},
@@ -102,10 +106,10 @@
 			},
 			_setCurrent() {
 				this.index = this.current
-				this._move(0, 0)
 				setTimeout(() => {
+					this._move(0, 0)
 					this.$emit('animated', this.index)
-				})
+				}, 0)
 			},
 			_setViewSize() {
 				let { offset, sizes } = this._calcItemSize()
@@ -163,7 +167,6 @@
 				this.userTracking = true
 				this._distance = 0
 				this._speed = 0
-				this._animating = false
 			},
 			_getSwiperSize() {
 				return this.vertical ? (this.$refs.swiper.offsetHeight - 0) : (this.$refs.swiper.offsetWidth - 0)
@@ -171,22 +174,22 @@
 			_onend(isCancel = false) {
 				this.userTracking = false
 				this._current = this.index
-				this._animating = false
 				if (!isCancel && (this._speed > 1 || Math.abs(this._distance) >= this._getSwiperSize() / 2)) { // 非取消||移动距离||时间够快
 					this._distance > 0 ? this.index-- : this.index++
-					this._caclIndex()
-					// return this._move()
+				} 
+				if(Math.abs(this._distance)) {
+					this._move() // 恢复
 				}
-				return this._move()
 			},
 			_onmove({ dx, dy, sx, sy }) {
+				if(this._animating) return
 				this._stopAutoPlay()
-
 				this._distance = this.vertical ? dy : dx
 				this._speed = this.vertical ? Math.abs(sy) : Math.abs(sx)
 				this._move(this._distance, 0)
 			},
-			_move(offset = 0, duration = DURATION) {
+			_move(offset = 0, duration = null) {
+				duration = null !== duration ? duration : this.duration 
 				this._caclIndex()
 				if (duration > 0) {
 					this._animating = true

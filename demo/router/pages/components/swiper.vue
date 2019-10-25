@@ -15,7 +15,7 @@
 
 		<demo>
 			<div style="height: 150px;">
-				<o-swiper ref="swiper" :loop="false" :dots="true" @change="change" @animated="animated" @animating="animating">
+				<o-swiper ref="swiper" @change="change" @animated="animated" @animating="animating" :duration="2000">
 					<o-swiper-item v-for="d in 5" :key="d">
 						<div gap="p24" text="tc" :color="`${d % 2 ? 'bgsuccess' : 'bgfail'} white`" style="height: 100%;">
 							默认{{d}}
