@@ -1,6 +1,17 @@
 <template>
 	<block>
 		<a color="main" href="https://github.com/laodifanga/o-ui/blob/master/demo/router/pages/css/color.vue" slot="more">源码</a>
+
+
+		<demo>
+			<div color="black" text="24" gap="p12">黑色black</div>
+			<div color="title" text="20" gap="p12">标题title</div>
+			<div color="cont" text="16" gap="p12">内容cont</div>
+			<div color="sub" text="14" gap="p12">二级标题sub</div>
+			<div color="desc" text="12" gap="p12">描述信息desc</div>
+			<div color="disabled" text="12" gap="p12">禁止使用disabled</div>
+			<div color="placeholder" text="12" gap="p12">一般用于输入框placeholder</div>
+		</demo>
 		
 		<demo>
 			<div color="main" gap="mb12 mt12">
@@ -31,7 +42,7 @@
 		
 		data() {
 			return {
-				baseColor: 'main,info,success,warning,fail,black,title,cont,desc,disabled,border,line,bg,white',
+				baseColor: 'main,info,success,warning,fail,black,title,sub,cont,desc,disabled,placeholder,border,line,bg,white',
 				
 				randColor: '#327ede'
 			}
