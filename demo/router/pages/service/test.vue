@@ -10,7 +10,7 @@
 
 <script>
 	export default {
-		__name: 'test | 说明'
+		__name: 'test | 服务测试'
 	}
 </script>
 

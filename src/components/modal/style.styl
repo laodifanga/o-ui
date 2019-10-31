@@ -1,0 +1,41 @@
+// o__element--modifier
+.o
+	&-modal, &-mask
+		position fixed
+		z-index 9
+	&-mask
+		left 0
+		top 0
+		bottom 0
+		width 100%
+	&-modal
+		overflow auto
+		&__center, &__left, &__right
+			display flex
+		&__center, &__top, &__bottom
+			width 100%
+		&__center, &__left, &__right
+			height 100%
+		&__center
+			left 0
+			top 0
+			align-items center
+			justify-content center
+		&__top, &__left, &__right
+			top 0
+		&__top
+			left 0
+		&__right
+			right 0
+		&__left
+			left 0
+		&__bottom
+			bottom 0
+			left 0
+		
+		.not-custom
+			background var(--white)
+			padding 28px
+			border-radius 8px
+		
+		
