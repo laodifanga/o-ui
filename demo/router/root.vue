@@ -1,7 +1,7 @@
 <template>
 	<div class="root">
 		<div class="intro" text="tc" color="bgmain white">
-			<img src="logo.png" class="intro-logo">
+			<img src="logo-inverse.png" class="intro-logo">
 			<div class="intro-name" text="24">
 				OUI
 			</div>

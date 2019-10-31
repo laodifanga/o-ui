@@ -6,6 +6,8 @@
 - vue-cli3.x脚手架
 ```
 
+示例[demo](https://oui.29mn.com)
+
 
 ## 适配 postcss-px-to-viewport .postcssrc设置
 ```js
@@ -124,10 +126,11 @@ npm run build:component
 
 ### gulp方式打包css
 ```
-npm run build:css
+npm run build:css // 已废弃
 ```
 
 ### github
 See [github](https://gitbub.com/laodifanga/o-ui).
+
 
 
