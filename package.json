@@ -2,7 +2,7 @@
   "name": "o-ui-ldf",
   "description": "OUI移动端VUE前端UI库 A mobile UI components Library with Vue.js",
   "prefix": "O",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "author": "laodifang <47121862@qq.com>",
   "keywords": [
     "o-ui",

@@ -4,11 +4,12 @@
 
 		<Demo title="按钮类型">
 		  <span gap="m4" btn>默认</span>
+		  <span gap="m4" btn>图标<i class="icon-del"></i></span>
 		  <span gap="m4" btn color="bgmain white">color="bgmain white"</span>
 		  <span gap="m4" btn="fit">fit</span>
 		  <span gap="m4" btn="plat">plat</span>
 		  <span gap="m4" btn="plat" radius="8">radius</span>
-		  <span gap="m4" btn="plat ico" radius="100">ico</span>
+		  <span gap="m4" btn="plat icon" radius="100"><i class="icon-del"></i></span>
 		  <span gap="m4" btn="text">text</span>
 		  <span gap="mt4" btn="block">block</span>
 		  <span gap="mt4" btn="block l">立即订购</span>
@@ -20,25 +21,26 @@
 			<span gap="m4" btn="fit l">l</span>
 		</Demo>
 		
-		<Demo title="图标 ico">
-		  <span gap="m4" btn="ico s">ico</span>
-		  <span gap="m4" btn="ico plat m">ico</span>
-		  <span gap="m4" btn="ico">ico</span>
-		  <span gap="m4" btn="ico plat l" radius="100">ico</span>
+		<Demo title="图标 icon">
+		  <span gap="m4" btn="icon s"><i class="icon-del"></i></span>
+		  <span gap="m4" btn="icon plat m"><i class="icon-add"></i></span>
+		  <span gap="m4" btn="icon"><i class="icon-del"></i></span>
+		  <span gap="m4" btn="icon">del</span>
+		  <span gap="m4" btn="icon plat l" radius="100" text="24"><i class="icon-del"></i></span>
 
-		  <span gap="m4" radius="100" btn="plat s ico">
+		  <span gap="m4" radius="100" btn="plat s icon">
 		    <img :src="src" />
 		  </span>
 		
-		  <span gap="m4" radius="100" btn="plat m ico">
+		  <span gap="m4" radius="100" btn="plat m icon">
 		    <img :src="src" />
 		  </span>
 		
-		  <span gap="m4" radius="8" btn="ico">
+		  <span gap="m4" radius="8" btn="icon">
 		    <img :src="src" />
 		  </span>
 		
-		  <span gap="m4" radius="100" btn="plat l ico">
+		  <span gap="m4" radius="100" btn="plat l icon">
 		    <img :src="src" />
 		  </span>
 		</Demo>
@@ -82,7 +84,7 @@
 		
 		data() {
 		  return {
-				src: 'http://thirdwx.qlogo.cn/mmopen/vi_32/82ypiarh4VEHapO9g7619xiao4KBfEAe6oVXWKkXYTbvdY5tOLQX0cNHVaBO6g9TJNFrYWDvGwgvPicBZTp615mjA/132',
+				src: 'http://thirdwx.qlogo.cn/mmopen/vi_32/82ypiarh4VEHapO9g7619xiao4KBfEAe6oVXWKkXYTbvdY5tOLQX0cNHVaBO6g9TJNFrYWDvGwgvPicBZTp615mjA/0',
 				
 				color: 'main info success warning fail black title cont desc disabled border',
 		  }

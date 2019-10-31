@@ -61,6 +61,10 @@ Vue.directive('pager', directive_pager)
 ```
 
 ## 日志
+- 0.2.4
+	- 新增組件swiper
+	- 新增css size
+	- 新增字体图标24个
 - 0.2.3
 	- 新增directive[pager]
 	- 基础css完成

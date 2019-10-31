@@ -112,7 +112,7 @@
 
 <script>
 	export default {
-		__name: 'swiper | 说明',
+		__name: 'swiper | 轮播图',
 
 		data() {
 			return {
