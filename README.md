@@ -63,6 +63,9 @@ Vue.directive('pager', directive_pager)
 ```
 
 ## 日志
+- 0.2.5
+	- 按照黄金分割思想微调css
+	- 更换图标字体42个，天然对齐文本
 - 0.2.4
 	- 新增組件swiper
 	- 新增css size

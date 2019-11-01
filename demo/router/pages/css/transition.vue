@@ -22,7 +22,9 @@
 			<div row="wrap jcsb">
 				<div border="c" color="line" gap="m4">
 					<div gap="p10">
-						<div o-spin text="tc 12" gap="p10" color="bgmain white">o-spin</div>
+						<span btn="ico" color="bgmain white" radius="100" text="42" o-spin row="aic jcc">
+							<i class="ico-loader" ></i>
+						</span>
 					</div>
 				</div>
 
