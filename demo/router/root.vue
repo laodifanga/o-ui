@@ -9,13 +9,13 @@
 		
 		<details details v-for="d,name,i in data" :key="i" open>
 			<summary color="white" class="sticky">
-				<div gap="p12" text="16" color="bgfail">{{name | magicName}}</div>
+				<div gap="p15" text="16" color="bgfail">{{name | magicName}}</div>
 			</summary>
 			
 			<div class="list" v-for="l in d" color="title">
-				<div gap="p12" row @click="$router.push({path: l.path})">
+				<div gap="p15" row @click="$router.push({path: l.path})">
 					<span text="16" col="1">{{l.name}}</span>
-					<span text="14" color="desc" gap="mr8">{{l.desc}}</span> <span color="desc" arrow></span>
+					<span text="14" color="desc" gap="mr6">{{l.desc}}</span> <span color="desc" arrow></span>
 				</div>
 			</div>
 		</details>

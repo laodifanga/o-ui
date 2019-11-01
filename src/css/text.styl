@@ -1,5 +1,5 @@
-// -------------- 间隔 text="12 14 16 20 24 28 32 36 40 48 56 64 72"
-sizes = 12 13 14 16 20 24 28 32 36 40 48 56 64 72
+// -------------- 间隔 12 14 16为基数的黄金分割算法
+sizes = 12 20 32 50 14 22 36 60 16 26 42 68
 for n,i in sizes
   [text~=\'{n}\']
     if n == 12
@@ -65,9 +65,9 @@ for n,i in sizes
 [text~='nowrap']
   white-space nowrap
 
-[text~='c']
+[text~='capitalize']
   text-transform capitalize
-[text~='u']
+[text~='upper']
   text-transform uppercase
-[text~='l']
+[text~='lower']
   text-transform lowercase

@@ -1,9 +1,9 @@
 [radius]
-  border-radius 8px
+  border-radius 4px
 
-for i in 2 3 4
-  [radius~=\'{i * 4}\']
-    border-radius i * 4 * 2px
+for n,i in 6 10 16 26
+  [radius~=\'{n}\']
+    border-radius n * 2px
 
 [radius~='50']
   border-radius 50%

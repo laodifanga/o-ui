@@ -6,7 +6,7 @@
 		<demo title="默认">
 			<o-swiper>
 				<o-swiper-item v-for="d in 5" :key="d">
-					<div gap="p24" text="tc" :color="`${d % 2 ? 'bgmain' : 'bginfo'} white`" style="height: 100%;">
+					<div gap="p30" text="tc" :color="`${d % 2 ? 'bgmain' : 'bginfo'} white`" style="height: 100%;">
 						默认{{d}}
 					</div>
 				</o-swiper-item>
@@ -15,9 +15,9 @@
 
 		<demo>
 			<div style="height: 150px;">
-				<o-swiper ref="swiper" @change="change" @animated="animated" @animating="animating" :duration="2000">
+				<o-swiper ref="swiper" @change="change" @animated="animated" @animating="animating" :duration="380">
 					<o-swiper-item v-for="d in 5" :key="d">
-						<div gap="p24" text="tc" :color="`${d % 2 ? 'bgsuccess' : 'bgfail'} white`" style="height: 100%;">
+						<div gap="p30" text="tc" :color="`${d % 2 ? 'bgsuccess' : 'bgfail'} white`" style="height: 100%;">
 							默认{{d}}
 						</div>
 					</o-swiper-item>
@@ -35,7 +35,7 @@
 			<div style="height: 150px;">
 				<o-swiper :dots="true" :auto-play="4000">
 					<o-swiper-item v-for="d in 5" :key="d">
-						<div gap="p24" text="tc" :color="`${d % 2 ? 'bgsuccess' : 'bgfail'} white`" style="height: 100%;">
+						<div gap="p30" text="tc" :color="`${d % 2 ? 'bgsuccess' : 'bgfail'} white`" style="height: 100%;">
 							默认{{d}}
 						</div>
 					</o-swiper-item>
@@ -46,7 +46,7 @@
 		<demo title="循环滚动">
 			<o-swiper :loop="true">
 				<o-swiper-item v-for="d in 5" :key="d">
-					<div gap="p36" text="tc" :color="`${d % 2 ? 'bgmain' : 'bginfo'} white`" style="height: 100%;">
+					<div gap="p40" text="tc" :color="`${d % 2 ? 'bgmain' : 'bginfo'} white`" style="height: 100%;">
 						默认{{d}}
 					</div>
 				</o-swiper-item>
@@ -82,15 +82,15 @@
 		<demo title="高度自适应">
 			<o-swiper :auto-height="true">
 				<o-swiper-item>
-					<div gap="p24" color="bgmain white">1</div>
+					<div gap="p30" color="bgmain white">1</div>
 				</o-swiper-item>
 				<o-swiper-item>
 					<div color="bgwarning white">
-						<div gap="p24" v-for="d in 5">1</div>
+						<div gap="p30" v-for="d in 5">1</div>
 					</div>
 				</o-swiper-item>
 				<o-swiper-item>
-					<div gap="p24" color="bgmain white">2</div>
+					<div gap="p30" color="bgmain white">2</div>
 				</o-swiper-item>
 			</o-swiper>
 		</demo>
@@ -99,7 +99,7 @@
 			<div style="height: 300px;">
 				<o-swiper :vertical="true" :dots="true">
 					<o-swiper-item v-for="d in 5" :key="d">
-						<div gap="p36" text="tc" :color="`${d % 2 ? 'bgsuccess' : 'bgfail'} white`" style="height: 100%;">
+						<div gap="p40" text="tc" :color="`${d % 2 ? 'bgsuccess' : 'bgfail'} white`" style="height: 100%;">
 							垂直滑动{{d}}
 						</div>
 					</o-swiper-item>

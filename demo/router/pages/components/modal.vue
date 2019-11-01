@@ -10,7 +10,7 @@
 
 			<o-modal ref="modal1" :custom="true" type="left" :mask-click="false" trans-name="o-move-left" :show="show" @change="e => show = e.value">
 				<div size="h100" color="bgmain">
-					<div gap="p36">
+					<div gap="p30">
  						<span btn @click="show = false">点我关闭</span>
 					</div>
 				</div>

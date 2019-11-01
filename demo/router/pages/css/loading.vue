@@ -3,25 +3,25 @@
 		<a color="main" href="https://github.com/laodifanga/o-ui/blob/master/demo/router/pages/css/loading.vue" slot="more">源码</a>
 		
 		<demo>
-			<span gap="m4" loading></span>
-			<span gap="m4" loading color="main"></span>
-			<span gap="m4" loading color="black"></span>
-			<span gap="m4" loading color="white"></span>
+			<span gap="m5" loading></span>
+			<span gap="m5" loading color="main"></span>
+			<span gap="m5" loading color="black"></span>
+			<span gap="m5" loading color="white"></span>
 		</demo>
 
 		<demo title="loading=flip">
-			<span gap="m4" loading="flip"></span>
-			<span gap="m4" loading="flip" color="main"></span>
-			<span gap="m4" loading="flip" color="black"></span>
-			<span gap="m4" loading="flip" color="white"></span>
+			<span gap="m5" loading="flip"></span>
+			<span gap="m5" loading="flip" color="main"></span>
+			<span gap="m5" loading="flip" color="black"></span>
+			<span gap="m5" loading="flip" color="white"></span>
 		</demo>
 
 		<demo title="尺寸: s m l">
 			<span v-for="d in size">
-				<span gap="m4" :loading="d" ></span>
+				<span gap="m5" :loading="d" ></span>
 			</span>
 
-			<span color="main" gap="m4" :loading="`${d} flip`" v-for="d in size"></span>
+			<span color="main" gap="m5" :loading="`${d} flip`" v-for="d in size"></span>
 		</demo>
 	</block>
 </template>

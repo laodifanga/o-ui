@@ -4,31 +4,31 @@
 		
 		<demo v-for="d in data" :title="`row=${d}`">
 			<div :row="d">
-				<div gap="p12" :color="`white ${n % 2 ? 'bgmain' : 'bgfail'}`" v-for="n in 6">{{n}}</div>
+				<div gap="p10" :color="`white ${n % 2 ? 'bgmain' : 'bgfail'}`" v-for="n in 6">{{n}}</div>
 			</div>
 		</demo>
 
 		<demo v-for="d in adata" :title="`row=${d}`">
 			<div :row="d">
-				<div gap="p12" :style="`height: ${n % 2 ? '50' : ''}px`" :color="`white ${n % 2 ? 'bgmain' : 'bgfail'}`" v-for="n in 6">{{n}}</div>
+				<div gap="p10" :style="`height: ${n % 2 ? '50' : ''}px`" :color="`white ${n % 2 ? 'bgmain' : 'bgfail'}`" v-for="n in 6">{{n}}</div>
 			</div>
 		</demo>
 
 		<demo v-for="d in jdata" :title="`row=${d}`">
 			<div :row="d">
-				<div gap="p12" :color="`white ${n % 2 ? 'bgmain' : 'bgfail'}`" v-for="n in 6">{{n}}</div>
+				<div gap="p10" :color="`white ${n % 2 ? 'bgmain' : 'bgfail'}`" v-for="n in 6">{{n}}</div>
 			</div>
 		</demo>
 
 		<demo title="row=wrap">
 			<div row="wrap">
-        <div gap="p12" :color="`white ${n % 2 ? 'bgmain' : 'bgfail'}`" v-for="n in 16">{{n}}</div>
+        <div gap="p10" :color="`white ${n % 2 ? 'bgmain' : 'bgfail'}`" v-for="n in 16">{{n}}</div>
       </div>
 		</demo>
 
 		<demo title="col=x">
 			<div row>
-        <div gap="p12" :col="n" :color="`white ${n % 2 ? 'bgmain' : 'bgfail'}`" v-for="n in 6">{{n}}</div>
+        <div gap="p10" :col="n" :color="`white ${n % 2 ? 'bgmain' : 'bgfail'}`" v-for="n in 6">{{n}}</div>
       </div>
 		</demo>
 	</block>

@@ -15,20 +15,20 @@
   summary::after
     content ''
     position absolute
-    right .75em
-    top calc(50% - .3em)
+    right 26px
+    top calc(50% - 13px)
     display inline-block
-    width .65em
-    height .65em
+    width 16px
+    height 16px
     border-top 2px solid currentColor
     border-right 2px solid currentColor
     transform rotate(45deg)
-    // transition transform $transTime
+    transition transform $transTime
 
   &[open] summary
     background rgba(0,0,0,.025)
   summary:hover
     cursor pointer
   &[open] summary::after
-    top calc(50% - .45em)
+    top calc(50% - 13px)
     transform rotate(135deg)

@@ -1,6 +1,6 @@
 [btn]
   display inline-block
-  padding 0 24px
+  padding 0 ($m * .618 * .618)
   height $m
   margin-bottom 0
   font-size inherit
@@ -27,7 +27,7 @@
 
 // 格式化最小宽度
 [btn~='fit']
-  min-width ($m * 2)
+  min-width $m * 2
   &[btn~='s']
     min-width $s * 2
   &[btn~='l']
@@ -36,7 +36,7 @@
   
 
 [btn~='s']
-  padding 0 20px
+  padding 0 ($s * .618 * .618)
   font-size 24px
   height $s
   line-height $s
@@ -46,7 +46,7 @@
 //   font-size 26px
 //   line-height (56 / 26)
 [btn~='l']
-  padding 0 48px
+  padding 0 ($l * .618 * .618)
   height $l
   font-size 32px
   line-height $l
@@ -93,12 +93,12 @@ groupRadius($radius = 8px)
 
 
 
-icoSize($size = 62px)
+icoSize($size)
   width $size
   height $size
   line-height $size!important
 // 图标
-[btn~='icon']
+[btn~='ico']
   border-radius 0
   min-width 0
   padding 0

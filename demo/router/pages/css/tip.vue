@@ -4,13 +4,13 @@
 
 		<demo>
 			<div gap="p20" text="tc">
-				<span btn="plat fit" color="main" gap="m16" v-for="d in data" :place="d.place" :tip="d.tip" open>{{d.tip}}</span>
+				<span btn="plat fit" color="main" gap="m15" v-for="d in data" :place="d.place" :tip="d.tip" open>{{d.tip}}</span>
 			</div>
 		</demo>
 		
 		<demo>
 			<div gap="p20" text="tc">
-				<span btn="plat fit" color="main" gap="m16" v-for="d in data" :place="d.place" :tip="d.tip">{{d.tip}}</span>
+				<span btn="plat fit" color="main" gap="m15" v-for="d in data" :place="d.place" :tip="d.tip">{{d.tip}}</span>
 			</div>
 		</demo>
 

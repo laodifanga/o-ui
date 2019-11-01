@@ -17,17 +17,17 @@
 		
 		<demo title="头像组 group">
 			<div avatar="group" v-for="d in data">
-				<span color="bgmain white" radius="100" :avatar="d">{{d}}</span>
-				<span color="bgmain white" radius="100" :avatar="d">{{d}}</span>
-				<span color="bgmain white" radius="100" :avatar="d">{{d}}</span>
+				<img :src="src" radius="100" :avatar="d" color="warning" border="c" />
+				<img :src="src" radius="100" :avatar="d" color="warning" border="c" />
+				<img :src="src" radius="100" :avatar="d" color="warning" border="c" />
 			</div>
 		</demo>
 		
 		<demo title="头像组反向 reverse [radius]">
-			<div avatar="group reverse" v-for="d in data">
-			  <span color="bgmain white" radius="100" :avatar="d" text="12">{{d}}</span>
-			  <span color="bgmain white" radius="100" :avatar="d" text="12">{{d}}</span>
-			  <span color="bgmain white" radius="100" :avatar="d" text="12">{{d}}</span>
+			<div avatar="group reverse" v-for="d,i in data">
+			  <span color="bgmain white" radius="100" :avatar="d" text="12" border>{{i}}</span>
+			  <span color="bgmain white" radius="100" :avatar="d" text="12" border>{{i}}</span>
+			  <span color="bgmain white" radius="100" :avatar="d" text="12" border>{{i}}</span>
 			</div>
 		</demo>
 	</block>

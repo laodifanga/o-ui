@@ -1,11 +1,24 @@
 <template>
 	<block>
-		<a color="main" href="https://github.com/laodifanga/o-ui/blob/master/demo/router/pages/css/text.vue" slot="more">源码</a>
-		
-		<demo title="text">
+		<a color="main" href="https://github.com/laodifanga/o-ui/blob/master/demo/router/pages/css/text.vue"
+			slot="more">源码</a>
+
+		<demo title="text 12 14 16为基数的黄金分割算法">
 			<div row="wrap aife">
-				<span border gap="m4" :text="d" v-for="d in data.split(' ')" :title="`text=${d}`">{{d}}</span>
+				<span border gap="m5 p5" :text="d" v-for="d in data.split(' ')" :title="`text=${d}`">{{d}}</span>
 			</div>
+		</demo>
+
+		<demo>
+			<div v-for="d in data.split(' ')" gap="mt10" row="aic" color="bgbg">
+				<span tag="fit" gap="mr10">{{d}}</span> <span :text="d"><i class="ico-info"></i>OUI前端库</span>
+			</div>
+		</demo>
+
+		<demo title="最大字号">
+			<span tag="fit" gap="mr10">50</span> <span text="50"><i class="ico-alert"></i></span>
+			<span tag="fit" gap="mr10">60</span> <span text="60"><i class="ico-alert"></i></span>
+			<span tag="fit" gap="mr10">68</span> <span text="68"><i class="ico-alert"></i></span>
 		</demo>
 
 		<demo v-for="d in odata.split(' ')" :title="`text=${d}`">
@@ -26,8 +39,8 @@
 
 		data() {
 			return {
-				data: '12 13 14 16 20 24 28 32 36 40 48 56 64 72',
-				odata: 'sm b i tl tc tr tj vm c u l',
+				data: 'sm 12 20 32 14 22 36 16 26 42',
+				odata: 'b i tl tc tr tj vm capitalize upper lower',
 				tdata: 'ell ell2 x y auto wrap nowrap',
 			}
 		}
