@@ -6,7 +6,7 @@
 		<demo title="默认">
 			<o-swiper>
 				<o-swiper-item v-for="d in 5" :key="d">
-					<div gap="p30" text="tc" :color="`${d % 2 ? 'bgmain' : 'bginfo'} white`" style="height: 100%;">
+					<div gap="p50" text="tc" :color="`${d % 2 ? 'bgmain' : 'bginfo'} white`" style="height: 100%;">
 						默认{{d}}
 					</div>
 				</o-swiper-item>
@@ -46,7 +46,7 @@
 		<demo title="循环滚动">
 			<o-swiper :loop="true">
 				<o-swiper-item v-for="d in 5" :key="d">
-					<div gap="p40" text="tc" :color="`${d % 2 ? 'bgmain' : 'bginfo'} white`" style="height: 100%;">
+					<div gap="p50" text="tc" :color="`${d % 2 ? 'bgmain' : 'bginfo'} white`" style="height: 100%;">
 						默认{{d}}
 					</div>
 				</o-swiper-item>
