@@ -6,7 +6,7 @@
 			<div row="wrap jcsb">
 				<div v-for="d in data.split(' ')" :key="d" size="w33" text="tc">
 					<div gap="pt10 pb10">
-						<span color="main" :class="`ico-${d}`" text="42"></span>
+						<span color="main" :class="`ico-${d}`" text="26"></span>
 						<div color="desc" gap="mt10">ico-{{d}}</div>
 					</div>
 				</div>
