@@ -1,12 +1,13 @@
 import { version, prefix } from '../package.json'
 
+import img from './components/img'
 import modal from './components/modal'
 import pager from './components/pager'
 import swiper from './components/swiper'
 import swiperItem from './components/swiper-item'
 
 let components = [
-	modal, pager, swiper, swiperItem
+	img, modal, pager, swiper, swiperItem
 ]
 
 import './style.styl'
@@ -20,7 +21,7 @@ if (typeof window !== 'undefined' && window.Vue) install(window.Vue)
 
 // demo用
 export {
-	modal, pager, swiper, swiperItem
+	img, modal, pager, swiper, swiperItem
 }
 
 export default { install, version }

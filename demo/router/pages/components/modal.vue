@@ -24,7 +24,7 @@
 
 <script>
 	export default {
-		__name: 'modal | 模态框',
+		__name: 'modal | 模态框 | 0',
 
 		data() {
 			return {

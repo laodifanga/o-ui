@@ -1,0 +1,30 @@
+// o__element--modifier
+@import '../../base'
+.o
+	&-img
+		display inline-flex
+		box-sizing border-box
+		vertical-align top
+		&__img
+			width 100%
+			height 100%
+		&--loading
+			text-align center
+			&:after
+				content ''
+				font-weight 700
+				width 100%
+				height 100%
+				min-width 50px
+				min-height 50px
+				background rgba(0,0,0,.05)
+				animation oImgLoading ($transTime * 4) infinite linear
+		&--done
+			animation oImgFade ($transTime * 4)
+
+		@keyframes oImgFade 
+			0%
+				opacity 0
+		@keyframes oImgLoading 
+			50%
+				background rgba(0,0,0,.1)
