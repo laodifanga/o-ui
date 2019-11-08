@@ -5,7 +5,7 @@ Vue.config.productionTip = false
 
 import 'normalize.css'
 
-import oUi from './../src'
+import oUi from 'src'
 Vue.use(oUi)
 
 

@@ -38,7 +38,7 @@
 </template>
 
 <script>
-	import { img } from '../../../../src/'
+	import { img } from 'src'
 	export default {
 		__name: 'img | 说明',
 

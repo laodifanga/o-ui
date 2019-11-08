@@ -31,6 +31,7 @@ export default main`,
 	
 	// style模板
 	styleTemplate: name => `// ${prefix.toLowerCase()}__element--modifier
+@import '../../base'
 .${prefix.toLowerCase()}
 	&-${name}
 		// css`,
