@@ -23,7 +23,7 @@
     "build:css": "gulp build --gulpfile gulpfile.js",
     "build:component": "webpack --config webpack.component.js",
     "build:directive": "webpack --config webpack.directive.js",
-    "git": "git add -A && git commit -m 'basic construction' && git push",
+    "git": "git add -A && git commit -m 'basic construction' -n && git push",
     "lib": "vue-cli-service build --target lib --name index --dest lib src/index.js && npm run build:component && npm run build:directive",
     "inspect": "vue-cli-service inspect",
     "new:c": "node utils/createComponent.js",
