@@ -13,6 +13,7 @@
 
 		props: {
 			src: '',
+			errorSrc: '',
 			lazy: { default: false },
 			width: '',
 			height: '',
@@ -40,6 +41,7 @@
 		data() {
 			return {
 				done: false, // 图片是否加载完成
+				error: false, // 懒加载错误
 			}
 		},
 
@@ -62,10 +64,16 @@
 						if (isIntersecting) {
 							let _img = new Image
 							_img.src = this.src
-							_img.onload = () => {
+							_img.onload = (e) => {
 								this.$refs.img.src = this.src
 								this.done = true
 								this.io.unobserve(this.$el)
+							}
+							_img.onerror = (e) => {
+								this.error = true
+								this.done = true
+								if(!this.errorSrc) return
+								this.$refs.img.src = this.errorSrc
 							}
 						}
 					})

@@ -1,6 +1,6 @@
 <template>
 	<div class="root">
-		<div class="intro" text="tc" color="bgmain white">
+		<div class="intro" text="tc" color="bgblack white">
 			<img src="logo-inverse.png" class="intro-logo">
 			<div class="intro-name" text="24">
 				OUI
@@ -9,7 +9,7 @@
 		
 		<details details v-for="d,name,i in data" :key="i" open>
 			<summary color="white" class="sticky">
-				<div gap="p15" text="16" color="bgfail">{{name | magicName}}</div>
+				<div gap="p15" text="16" color="bgmain">{{name | magicName}}</div>
 			</summary>
 			
 			<div class="list" v-for="l in d" color="title">
@@ -43,7 +43,7 @@
 				return name
 					.replace('css', '样式')
 					.replace('components', '组件')
-					.replace('ext', '扩展')
+					.replace('ext', '扩展组件')
 					.replace('service', '服务')
 			}
 		},
@@ -70,7 +70,6 @@
 	.intro
 		padding 2em 0
 		overflow hidden
-		background: var(--black);
 		&-logo
 			width 150px
 			height 150px
