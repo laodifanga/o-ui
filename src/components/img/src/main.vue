@@ -7,7 +7,7 @@
 
 <script>
 	import { version, prefix } from '../../../../package.json'
-	import 'intersection-observer'
+	// import 'intersection-observer'
 	export default {
 		name: `${prefix}Img`,
 

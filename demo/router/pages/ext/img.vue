@@ -6,7 +6,7 @@
 		<demo>
 			<div row="wrap">
 				<div text="tc" size="w50" col v-for="fit in fits" :key="fit">
-					<o-img gap="p5" border :fit="fit" height="130px" :src="avatar" lazy />
+					<o-img gap="p5" border :fit="fit" height="180px" :src="avatar" lazy />
 					<div text="tc" gap="p5">{{fit || '无'}}</div>
 				</div>
 			</div>
@@ -17,7 +17,7 @@
 		</demo>
 
 
-		<div gap="mt10" style="height: 50vh" text="tc">继续下拉 图片懒加载</div>
+		<div gap="m30" text="tc">继续下拉 图片懒加载</div>
 
 		<demo title="lazy 懒加载">
 			<div row="wrap jcsb">
