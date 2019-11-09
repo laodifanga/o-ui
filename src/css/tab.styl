@@ -1,0 +1,19 @@
+[tab]
+  display flex
+  white-space nowrap
+  overflow auto
+  [tab-item]
+    padding .5em 1em
+    text-align center
+    flex 1
+    transition all $transTime
+  [tab-item~='act']
+    position relative
+    &:after
+      content ''
+      position absolute
+      bottom 0
+      width 80%
+      left 10%
+      height .15em
+      background currentColor

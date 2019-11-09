@@ -1,11 +1,11 @@
 <template>
 	<div>
 		<transition name="o-fade" appear>
-			<div class="o-mask" :style="styles" v-if="flag" @click="close(true)"></div>
+			<div class="o-mask" :style="styles" v-if="mask && flag" @click="close(true)"></div>
 		</transition>
 		<transition :name="transName" @after-leave="_afterLeave">
 			<div class="o-modal" :class="classes" v-if="flag" @click="close(true)">
-				<div @click.stop :class="{'not-custom': !custom}"><slot></slot></div>
+				<div class="content" @click.stop :class="{'not-custom': !custom}"><slot></slot></div>
 			</div>
 		</transition>
 	</div>
@@ -30,8 +30,11 @@
 				default: false,
 			},
 			maskBackground: '',
-			maskClick: { // 蒙版点击是否关闭弹窗
+			maskClick: { // 蒙层点击是否关闭弹窗
 				default: true
+			},
+			mask: { // 是否显示蒙层
+				default: true,
 			}
 		},
 
@@ -44,7 +47,8 @@
 
 			classes() {
 				return {
-					[`${prefix.toLowerCase()}-modal__${this.type}`]: true
+					[`${prefix.toLowerCase()}-modal__${this.type}`]: true,
+					[`${prefix.toLowerCase()}-modal--events`]: !this.mask
 				}
 			}
 		},
@@ -84,7 +88,6 @@
 				}
 			}
 		},
-
 		destroyed() {
 			this._removeFromBody()
 		}

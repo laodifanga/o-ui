@@ -68,6 +68,7 @@
 								this.$refs.img.src = this.src
 								this.done = true
 								this.io.unobserve(this.$el)
+								this.$emit('loaded', _img)
 							}
 							_img.onerror = (e) => {
 								this.error = true

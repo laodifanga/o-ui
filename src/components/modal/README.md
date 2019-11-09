@@ -9,8 +9,9 @@ transName | String | o-zoom | 动画名称，可选值：o-zoom,o-fade,o-move-le
 type | String | center | 弹出方式，可选值：,top center bottom left right
 show | Boolean | false | 显示弹窗
 custom | Boolean | false | 是否自定义
-maskBackground | String | - | 蒙版颜色
-maskClick | Boolean | true | 蒙版点击是否关闭弹窗
+maskBackground | String | - | 蒙层颜色
+maskClick | Boolean | true | 蒙层点击是否关闭弹窗
+mask | Boolean | true | 是否显示蒙层
 
 
 > slot

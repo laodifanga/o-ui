@@ -107,6 +107,19 @@
 			</div>
 		</demo>
 
+		<demo title="结合tab">
+			<div tab>
+				<div :color="i == currentTab ? 'main' : ''" :tab-item="i == currentTab ? 'act' : ''" v-for="d,i in 5" @click="tapTab(d, i)">tab{{d}}</div>
+			</div>
+			<o-swiper ref="tab" @change="changetab">
+				<o-swiper-item v-for="d in 5" :key="d">
+					<div gap="p50" text="tc" :color="`${d % 2 ? 'bgcont' : 'bginfo'} white`" style="height: 100%;">
+						默认{{d}}
+					</div>
+				</o-swiper-item>
+			</o-swiper>
+		</demo>
+
 	</block>
 </template>
 
@@ -118,7 +131,9 @@
 			return {
 				current: 1,
 				index: 0,
-				animate: false
+				animate: false,
+
+				currentTab: 0
 			}
 		},
 
@@ -127,12 +142,21 @@
 				this.index = n
 			},
 
-			animated() {
+			animated(e) {
 				this.animate = false
 			},
 
 			animating() {
 				this.animate = true
+			},
+
+			changetab(e) {
+				this.currentTab = e
+			},
+
+			tapTab(d, i) {
+				this.currentTab = i
+				this.$refs.tab.moveTo(i)
 			}
 		},
 

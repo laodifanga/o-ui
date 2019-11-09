@@ -4,6 +4,7 @@
 	&-modal, &-mask
 		position fixed
 		z-index 9
+		
 	&-mask
 		left 0
 		top 0
@@ -11,6 +12,8 @@
 		width 100%
 	&-modal
 		overflow auto
+		&--events
+			pointer-events none 
 		&__center, &__left, &__right
 			display flex
 		&__center, &__top, &__bottom
@@ -38,5 +41,7 @@
 			background var(--white)
 			padding 28px
 			border-radius 8px
+		.content
+			pointer-events auto
 		
 		
