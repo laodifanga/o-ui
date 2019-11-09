@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<section>
 		<transition name="o-fade" appear>
 			<div class="o-mask" :style="styles" v-if="mask && flag" @click="close(true)"></div>
 		</transition>
@@ -8,7 +8,7 @@
 				<div class="content" @click.stop :class="{'not-custom': !custom}"><slot></slot></div>
 			</div>
 		</transition>
-	</div>
+	</section>
 </template>
 
 <script>
@@ -61,7 +61,7 @@
 
 		data() {
 			return {
-				flag: false
+				flag: false,
 			}
 		},
 
@@ -78,6 +78,7 @@
 			},
 			_afterLeave() {
 				this._removeFromBody()
+				this.$emit('changed', {value: false})
 			},
 			_appendToBody() {
 				document.body && document.body.append(this.$el)
@@ -86,6 +87,9 @@
 				if(this.$el && this.$el.parentNode) {
 					this.$el.parentNode.removeChild(this.$el)
 				}
+			},
+			destroy() {
+				this.$destroy()
 			}
 		},
 		destroyed() {

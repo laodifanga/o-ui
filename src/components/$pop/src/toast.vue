@@ -1,5 +1,5 @@
 <template>
-  <modal ref="modal" v-bind="$props">
+  <modal ref="modal" v-bind="$props" @changed="changed">
     <div class="o-pop-toast">
       <div class="o-pop-toast__cont">
         {{content}}
@@ -39,7 +39,7 @@
         default: false
       },
       mask: { // 是否显示蒙层
-        default: true,
+        default: false,
       },
     },
  
@@ -60,7 +60,9 @@
         this.$refs.modal.close()
         this.success()
         this.timer = null
-        this.$destroy()
+      },
+      changed() {
+        this.$refs.modal.destroy()
       }
     }
   }

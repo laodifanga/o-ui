@@ -4,7 +4,7 @@
 		
 		<demo>
 			<span btn @click="toast">弹出toast</span>
-			<span btn @click="$pop.toast({mask: false})">可穿透点击</span>
+			<span btn @click="$pop.toast({mask: true})">不可穿透点击</span>
 		</demo>
 	</block>
 </template>
