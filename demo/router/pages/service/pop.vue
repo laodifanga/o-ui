@@ -132,15 +132,18 @@
 			},
 
 			alert() {
+				// return this.$pop.alert('默认alert')
 				this.$pop.alert({
 					title: '我是title',
 					content: '我是content',
-					maskBackground: 'rgba(0,0,0,.5)',
+					// maskBackground: 'rgba(0,0,0,.5)',
 					success(res) {
 						console.log('success', res)
+						this.$pop.toast('你点击了确定')
 					},
 					fail(res) {
 						console.log('fail', res)
+						this.$pop.toast('你取消了')
 					},
 				})
 			},

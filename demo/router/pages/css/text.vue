@@ -47,7 +47,7 @@
 					</div>
 				</div>
 			</div>
-			<div gap="mt20" text="12" color="disabled">* 加油/消费入账统计存在1-2日数据延迟</div>
+			<div gap="mt20" text="sm" color="disabled">* 加油/消费入账统计存在1-2日数据延迟</div>
 		</demo>
 
 		<demo title="text 12 14 16为基数的黄金分割算法">

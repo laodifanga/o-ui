@@ -19,7 +19,32 @@
 					max-width 100%
 	&-pop-alert
 		&__cont
-			color green
+			background #fff
+			border-radius 12px
+			min-width 70vw
+			text-align center
+			.title
+				font-size 44px
+				padding 30px 20px 20px 20px
+			.content
+				color gray
+				padding 0 20px
+				min-height 4em
+				display flex
+				align-items center
+				justify-content center
+			.footer
+				display flex
+				margin-top 20px
+				.btn
+					flex 1
+					padding 20px
+					font-weight 700
+					font-size 32px
+					letter-spacing .25em
+					color var(--desc)
+					&:nth-child(1)
+						color var(--main)
 	&-pop-loading
 		text-align center
 		padding 30px

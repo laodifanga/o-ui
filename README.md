@@ -63,6 +63,8 @@ Vue.directive('pager', directive_pager)
 ```
 
 ## 日志
+- 0.2.x
+	- 新增内置服务$pop[toast,loading,alert]
 - 0.2.5
 	- 按照黄金分割思想微调css
 	- 更换图标字体42个，天然对齐文本
