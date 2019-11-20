@@ -1,12 +1,19 @@
 <template>
   <modal ref="modal" v-bind="$props" @changed="changed">
-    <div class="o-pop-toast">
-      <div class="o-pop-toast__cont">
-        <div class="icon" v-if="image"><img :src="image"></div>
-        <div class="icon" v-if="ico"> 
-          <i :class="`ico-${ico}`" text="50"></i>
+    <div class="o-pop-alert">
+      <div class="o-pop-alert__cont">
+        <div class="title" v-if="title">{{title}}</div>
+        <div class="content" v-if="content">
+          <div class="icon" v-if="image"><img :src="image"></div>
+          <div class="icon" v-if="ico">
+            <i :class="`ico-${ico}`" text="50"></i>
+          </div>
+          {{content}}
         </div>
-        {{content}}
+        <div class="footer">
+          <div class="confirm">确定</div>
+          <div class="cancel">取消</div>
+        </div>
       </div>
     </div>
   </modal>
@@ -19,9 +26,10 @@
     mixins: [onchange],
     components: { modal },
     props: {
-      content: { type: [String, Object], default: 'toast' },
-      duration: { type: Number, default: 2000 },
+      title: { type: [String, Object], default: '' },
+      content: { type: [String, Object], default: 'alert' },
       success: { type: Function, default: () => { } },
+      fail: { type: Function, default: () => { } },
 
       type: { type: String, default: 'center' }, // 弹出方式 top center bottom left right
       transName: { // 动画，结合自带动画名称o-fade, o-move-bottom ...
@@ -40,7 +48,7 @@
         default: false
       },
       mask: { // 是否显示蒙层
-        default: false,
+        default: true,
       },
       image: { // 自定义图片图标
         default: ''
@@ -49,7 +57,7 @@
         default: ''
       }
     },
- 
+
     mounted() {
       this.timer = null
       this.open()
@@ -57,10 +65,6 @@
 
     methods: {
       open() {
-        if(this.timer) return
-        if (this.duration > 0) {
-          this.timer = setTimeout(this.close, this.duration)
-        }
         this.$refs.modal.open()
       },
       close() {

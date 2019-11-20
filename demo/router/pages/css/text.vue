@@ -3,6 +3,53 @@
 		<a color="main" href="https://github.com/laodifanga/o-ui/blob/master/demo/router/pages/css/text.vue"
 			slot="more">源码</a>
 
+		<demo gap="p10" title="综合示例">
+			<div gap="p10" shadow radius="6">
+				<div row="aic">
+					<div col="1">
+						<div text="22">预计返现</div>
+						<div text="12" color="sub" gap="mt10">加油越多 返现越多 最高可返60元</div>
+					</div>
+					<div color="fail">
+						<small text="22" gap="mr5">¥</small>
+						<span text="36">24</span>
+					</div>
+				</div>
+
+				<div row="aic" gap="mt20">
+					<div col="1">
+						<div text="16">
+							<i class="ico-image" gap="mr5"></i>
+							已持指定加油卡¥199.98
+						</div>
+						<div text="12" color="sub" gap="mt15">
+							<span gap="p5 pl15 pr15 mr10" border="c" color="warning" radius="100">附近指定加油站</span>
+							<span gap="p5 pl15 pr15" border="c" color="warning" radius="100">充油卡</span>
+						</div>
+					</div>
+					<div>
+						<span text="14" gap="p5 pl10 pr10" radius="6" color="bgsuccess bg+ success">已完成</span>
+					</div>
+				</div>
+
+				<div row="aic" gap="mt20">
+					<div col="1">
+						<div text="16">
+							<i class="ico-alert" gap="mr5"></i>
+							完成1笔快捷支付<span text="14" color="desc">(任意金额)</span>
+						</div>
+						<div text="14" color="desc" gap="mt10">
+							不含 指定加油站加油/充油卡消费
+						</div>
+					</div>
+					<div>
+						<span text="14" gap="p5 pl10 pr10" radius="6" color="bgwarning bg+ warning">待完成</span>
+					</div>
+				</div>
+			</div>
+			<div gap="mt20" text="12" color="disabled">* 加油/消费入账统计存在1-2日数据延迟</div>
+		</demo>
+
 		<demo title="text 12 14 16为基数的黄金分割算法">
 			<div row="wrap aife">
 				<span border gap="m5 p5" :text="d" v-for="d in data.split(' ')" :title="`text=${d}`">{{d}}</span>

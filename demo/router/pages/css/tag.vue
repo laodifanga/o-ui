@@ -23,19 +23,19 @@
 		</demo>
 
 		<demo  title="tag + color">
-			<span v-for="c in color.split(' ')" gap="m4" tag :color="`bg${c} white`">标签</span>
+			<span v-for="c in color.split(' ')" gap="m5" tag :color="`bg${c} white`">标签</span>
 		</demo>
 
 		<demo  title="tag + color">
-			<span v-for="c in color.split(' ')" gap="m4" tag="plat +" :color="`bg+ bg${c} ${c}`">标签</span>
+			<span v-for="c in color.split(' ')" gap="m5" tag="plat +" :color="`bg+ bg${c} ${c}`">标签</span>
 		</demo>
 
 		<demo  title="tag=plat + color">
-			<span v-for="c in color.split(' ')" gap="m4" tag="plat" :color="`${c}`">标签</span>
+			<span v-for="c in color.split(' ')" gap="m5" tag="plat" :color="`${c}`">标签</span>
 		</demo>
 
 		<demo  title="tag=plat + color + radius">
-			<span v-for="c in color.split(' ')" gap="m4" tag="plat" radius="100" :color="`${c}`">标签</span>
+			<span v-for="c in color.split(' ')" gap="m5" tag="plat" radius="100" :color="`${c}`">标签</span>
 		</demo>
 	</block>
 </template>

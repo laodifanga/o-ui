@@ -14,6 +14,14 @@
 		  <span gap="mt5" btn="block">block</span>
 		  <span gap="mt5" btn="block l">立即订购</span>
 		</Demo>
+
+		<Demo>
+			<span gap="m5" btn="main">主色</span>
+			<span gap="m5" btn="success">成功</span>
+			<span gap="m5" btn="fail">失败</span>
+			<span gap="m5" btn="warning">警告</span>
+			<span gap="m5" btn="info">信息</span>
+		</Demo>
 		
 		<Demo title="按钮尺寸 s m l">
 			<span gap="m5" btn="fit s">s</span>

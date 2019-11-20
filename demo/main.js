@@ -9,8 +9,6 @@ import oUi from 'src'
 Vue.use(oUi)
 
 
-
-
 import Block from '@/components/block'
 import Demo from '@/components/demo'
 Vue.component('Block', Block)

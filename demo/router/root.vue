@@ -7,9 +7,9 @@
 			</div>
 		</div>
 		
-		<details details v-for="d,name,i in data" :key="i" open>
+		<details details v-for="d,name,i in data" :key="i" :open="false">
 			<summary color="white" class="sticky">
-				<div gap="p15" text="16" color="bgmain">{{name | magicName}}</div>
+				<div gap="p15" text="16" color="bgmain">{{name | magicName}} <span tag="sup" color="bgwhite main">{{d.length}}</span></div>
 			</summary>
 			
 			<div class="list" v-for="l in d" color="title">
