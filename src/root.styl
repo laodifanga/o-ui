@@ -1,0 +1,10 @@
+body
+  font-size 28px
+  // line-height (32 / 28) // 字体图标grid  grid 16 天然文字对齐
+  font-family "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif
+  color var(--slate)
+[disabled]
+  &:not([disabled='false'])
+    opacity .25
+    filter grayscale(1)
+    pointer-events none
