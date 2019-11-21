@@ -4,7 +4,7 @@ const getRoutes = () => {
 		let cd = context(c).default
 		let { __name } = cd
 		__name = __name ? __name.split('|') : []
-		let length = __name.lengths
+		let length = __name.length
 		let path = '/root/' + c.substr(2, c.length - 6)
 		let name = __name.length ? __name[0] : ''
 		let desc = __name.length > 1 ? __name[1] : ''

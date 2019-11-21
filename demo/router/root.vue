@@ -16,10 +16,10 @@
 				<div gap="p15" row @click="$router.push({path: l.path})">
 					<span text="16" col="1">
 						{{l.name}}
-						<span tag v-if="l.length > 2" radius="6" color="bgdesc white">EXT</span>
+						<span tag="" v-if="l.length > 2" radius color="bgslate10 white">EXT</span>
 					</span>
 					
-					<span text="14" color="desc" gap="mr6">{{l.desc}}</span> <span color="desc" arrow></span>
+					<span text="14" color="slate10" gap="mr5">{{l.desc}}</span> <span color="slate10" arrow></span>
 				</div>
 			</div>
 		</details>
@@ -45,6 +45,7 @@
 					.replace('components', '组件')
 					.replace('ext', '扩展组件')
 					.replace('service', '服务')
+					.replace('form', '表单')
 			}
 		},
 		

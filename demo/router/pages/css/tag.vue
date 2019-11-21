@@ -1,9 +1,11 @@
 <template>
 	<block>
-		<a color="main" href="https://github.com/laodifanga/o-ui/blob/master/demo/router/pages/css/tag.vue" slot="more">源码</a>
-		
+		<a color="main" href="https://github.com/laodifanga/o-ui/blob/master/demo/router/pages/css/tag.vue"
+			slot="more">源码</a>
+
 		<demo>
 			<span tag>tag</span>
+			<span tag color="white bgmain" gap="m5">tag <i class="ico-close"></i></span>
 		</demo>
 
 		<demo title="上下标 sup sub">
@@ -22,20 +24,25 @@
 			留言<b tag="sup" color="bgmain white">999999</b>
 		</demo>
 
-		<demo  title="tag + color">
+		<demo title="tag + color">
+			<span v-for="c in color.split(' ')" gap="m5" tag radius :color="`bg${c} white`">标签</span>
+		</demo>
+
+		<demo title="tag + color">
 			<span v-for="c in color.split(' ')" gap="m5" tag :color="`bg${c} white`">标签</span>
 		</demo>
 
-		<demo  title="tag + color">
+		<demo title="tag + color">
 			<span v-for="c in color.split(' ')" gap="m5" tag="plat +" :color="`bg${c}20 ${c}`">标签</span>
 		</demo>
 
-		<demo  title="tag=plat + color">
+		<demo title="tag=plat + color">
 			<span v-for="c in color.split(' ')" gap="m5" tag="plat" :color="`${c}10`">标签</span>
 		</demo>
 
-		<demo  title="tag=plat + color + radius">
-			<span v-for="c in color.split(' ')" gap="m5" tag="plat" radius="100" :color="`${c}10`"><span :color="c">标签</span></span>
+		<demo title="tag=plat + color + radius">
+			<span v-for="c in color.split(' ')" gap="m5" tag="plat" radius="100" :color="`${c}10`"><span
+					:color="c">标签</span></span>
 		</demo>
 	</block>
 </template>
