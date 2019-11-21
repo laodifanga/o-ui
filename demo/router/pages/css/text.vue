@@ -8,9 +8,9 @@
 				<div row="aic">
 					<div col="1">
 						<div text="22">预计返现</div>
-						<div text="12" color="sub" gap="mt10">加油越多 返现越多 最高可返60元</div>
+						<div text="12" color="slate10" gap="mt10">加油越多 返现越多 最高可返60元</div>
 					</div>
-					<div color="fail">
+					<div color="red">
 						<small text="22" gap="mr5">¥</small>
 						<span text="36">24</span>
 					</div>
@@ -22,13 +22,13 @@
 							<i class="ico-image" gap="mr5"></i>
 							已持指定加油卡¥199.98
 						</div>
-						<div text="12" color="sub" gap="mt15">
-							<span gap="p5 pl15 pr15 mr10" border="c" color="warning" radius="100">附近指定加油站</span>
-							<span gap="p5 pl15 pr15" border="c" color="warning" radius="100">充油卡</span>
+						<div text="12" color="slate10" gap="mt15">
+							<span gap="p5 pl15 pr15 mr10" border="c" color="orange" radius="100">附近指定加油站</span>
+							<span gap="p5 pl15 pr15" border="c" color="orange" radius="100">充油卡</span>
 						</div>
 					</div>
 					<div>
-						<span text="14" gap="p5 pl10 pr10" radius="6" color="bgsuccess bg+ success">已完成</span>
+						<span text="14" gap="p5 pl10 pr10" radius="6" color="bggreen20 green">已完成</span>
 					</div>
 				</div>
 
@@ -36,18 +36,18 @@
 					<div col="1">
 						<div text="16">
 							<i class="ico-alert" gap="mr5"></i>
-							完成1笔快捷支付<span text="14" color="desc">(任意金额)</span>
+							完成1笔快捷支付<span text="14" color="gray10">(任意金额)</span>
 						</div>
-						<div text="14" color="desc" gap="mt10">
+						<div text="14" color="gray10" gap="mt10">
 							不含 指定加油站加油/充油卡消费
 						</div>
 					</div>
 					<div>
-						<span text="14" gap="p5 pl10 pr10" radius="6" color="bgwarning bg+ warning">待完成</span>
+						<span text="14" gap="p5 pl10 pr10" radius="6" color="bgorange20 orange">待完成</span>
 					</div>
 				</div>
 			</div>
-			<div gap="mt20" text="sm" color="disabled">* 加油/消费入账统计存在1-2日数据延迟</div>
+			<div gap="mt20" text="sm" color="silver">* 加油/消费入账统计存在1-2日数据延迟</div>
 		</demo>
 
 		<demo title="text 12 14 16为基数的黄金分割算法">

@@ -1,13 +1,13 @@
 <template>
 	<div class="root">
-		<div class="intro" text="tc" color="bgblack white">
+		<div class="intro" text="tc" color="bgslate white">
 			<img src="logo-inverse.png" class="intro-logo">
 			<div class="intro-name" text="24">
 				OUI
 			</div>
 		</div>
 		
-		<details details v-for="d,name,i in data" :key="i" :open="false">
+		<details details v-for="d,name,i in data" :key="i" :open="true">
 			<summary color="white" class="sticky">
 				<div gap="p15" text="16" color="bgmain">{{name | magicName}} <span tag="sup" color="bgwhite main">{{d.length}}</span></div>
 			</summary>
@@ -64,7 +64,7 @@
 		left: 0;
 		width 100%
 		height 100vh
-		background: var(--bg);
+		background: var(--silver20);
 		overflow: auto;
 		
 	.intro

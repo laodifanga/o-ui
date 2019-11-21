@@ -1,6 +1,7 @@
 import { version, prefix } from '../package.json'
 
 import $pop from './components/$pop'
+import formRule from './components/form-rule'
 import img from './components/img'
 import modal from './components/modal'
 import pager from './components/pager'
@@ -9,6 +10,7 @@ import swiperItem from './components/swiper-item'
 
 export { // demo用
 	img, 
+	formRule,
 	modal, pager, swiper, swiperItem, $pop
 }
 

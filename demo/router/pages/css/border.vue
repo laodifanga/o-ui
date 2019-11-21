@@ -10,7 +10,7 @@
 		
 		<Demo title="边框">
 		  <div row="wrap">
-		    <div col="1" text="nowrap" :color="`bgwhite ${~b.indexOf('c') ? (Math.random() > .5 ? 'main' : 'fail') : ''}`" gap="p20 m10" v-for="b in borders" :border="b">border="{{b}}"</div>
+		    <div col="1" text="nowrap" :color="`bgwhite ${~b.indexOf('c') ? (Math.random() > .5 ? 'main' : 'red') : ''}`" gap="p20 m10" v-for="b in borders" :border="b">border="{{b}}"</div>
 		  </div>
 		</Demo>
 	</block>

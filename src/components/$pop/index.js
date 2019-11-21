@@ -28,7 +28,7 @@ const pop = (Vue) => {
 }
 
 pop.install = (Vue) => {
-	Vue.$pop = Vue.prototype.$pop = pop(vue)
+	Vue.$pop = Vue.prototype.$pop = pop(Vue)
 }
 
 export default pop

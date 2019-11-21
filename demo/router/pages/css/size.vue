@@ -9,7 +9,7 @@
 				<div size="w62" color="bgmain white" row="wrap">
 					<div gap="p15">w62</div>
 				</div>
-				<div size="w38" color="bgfail white">
+				<div size="w38" color="bgblack white">
 					<div gap="p15">w38</div>
 				</div>
 			</div>
@@ -35,7 +35,7 @@
 
 		<demo title="size=w?">
 			<div row="wrap">
-				<div v-for="d,i in data.split(' ')" :color="i%2 ? 'bgmain white' : 'bgfail white'" :size="`w${d}`">
+				<div v-for="d,i in data.split(' ')" :color="i%2 ? 'bgmain white' : 'bgblack white'" :size="`w${d}`">
 					<div gap="p15">w{{d}}</div>
 				</div>
 			</div>
@@ -43,7 +43,7 @@
 
 		<demo title="size=h?">
 			<div style="height: 200px;">
-				<div v-for="d,i in data.split(' ')" :color="i%2 ? 'bgmain white' : 'bgfail white'" :size="`h${d}`">
+				<div v-for="d,i in data.split(' ')" :color="i%2 ? 'bgmain white' : 'bgblack white'" :size="`h${d}`">
 					<div gap="p15">h{{d}}</div>
 				</div>
 			</div>

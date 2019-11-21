@@ -1,11 +1,11 @@
 const {version, prefix} = require('../package')
-
+const ucword = (str) => str.split('-').map( i => i.slice(0, 1).toUpperCase() + i.slice(1) ).join('')
 module.exports = {
 	// vue模板
-	vueTemplate: name => {
-		name = name.toLowerCase().slice(0, 1).toUpperCase() + name.slice(1)
+	vueTemplate: names => {
+		let name = ucword(names)
 		return `<template>
-	<div class="o-${name.toLowerCase()}">
+	<div class="o-${names.toLowerCase()}">
 		${name}组件
 	</div>
 </template>

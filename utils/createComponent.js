@@ -2,9 +2,9 @@ const {mkdirs, createDir, createFile, resolve, checkDir, err, log, success} = re
 const {vueTemplate, indexJsTemplate, styleTemplate, readmeTemplate} = require('./template.js')
 log('请输入要生成的组件的名称')
 
+
 process.stdin.on('data', async chunk => {
 	const input = String(chunk).trim().toString()
-	
 	// 组件目录
 	let componentDir = resolve(`../src/components/${input}`)
 	let mainVue = resolve(componentDir, 'src/main.vue')

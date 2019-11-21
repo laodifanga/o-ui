@@ -197,7 +197,7 @@
 				}
 
 				let _offset = this._setItemOffset(-this._itemOffset[this.index] + offset),
-					transform = this.vertical ? `translate3d(0,${_offset}px,0)` : `translate3d(${_offset}px,0,0)`,
+					transform = this.vertical ? `translate3d(0,${Math.floor(_offset)}px,0)` : `translate3d(${Math.floor(_offset)}px,0,0)`,
 					frame = this.$refs.frame
 				frame.style.webkitTransition = `-webkit-transform ${duration}ms ease-in-out`
 				frame.style.webkitTransform = transform

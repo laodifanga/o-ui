@@ -8,12 +8,12 @@
 				<div :tab-item="i==0 ? 'act' : ''" v-for="d,i in data" :key="i">{{d}}</div>
 			</div>
 
-			<div tab color="fail" text="16">
+			<div tab color="red" text="16">
 				<div :tab-item="i==1 ? 'act' : ''" v-for="d,i in data" :key="i" v-if="i < 4">{{d}}</div>
 			</div>
 
 			<div tab text="26" color="cont">
-				<div :tab-item="i==2 ? 'act' : ''" :color="i==2 ? 'success' : ''" v-for="d,i in data" :key="i" v-if="i < 4">{{d}}</div>
+				<div :tab-item="i==2 ? 'act' : ''" :color="i==2 ? 'main' : ''" v-for="d,i in data" :key="i" v-if="i < 4">{{d}}</div>
 			</div>
 		</demo>
 	</block>

@@ -20,7 +20,8 @@
 	&-pop-alert
 		&__cont
 			background #fff
-			border-radius 12px
+			border-radius .25em
+			overflow hidden
 			min-width 70vw
 			text-align center
 			.title
@@ -39,10 +40,13 @@
 				.btn
 					flex 1
 					padding 20px
-					font-weight 700
+					// font-weight 700
 					font-size 32px
-					letter-spacing .25em
+					user-select none
+					// letter-spacing .25em
 					color var(--desc)
+					&:active
+						background var(--bg)
 					&:nth-child(1)
 						color var(--main)
 	&-pop-loading

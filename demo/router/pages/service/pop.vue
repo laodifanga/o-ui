@@ -136,14 +136,14 @@
 				this.$pop.alert({
 					title: '我是title',
 					content: '我是content',
-					// maskBackground: 'rgba(0,0,0,.5)',
+					maskBackground: Math.random() > .5 ? 'rgba(50,100,200,.8)' : '',
 					success(res) {
 						console.log('success', res)
-						this.$pop.toast('你点击了确定')
+						this.$pop.toast('你点击了' + (res ? '确定' : '取消'))
 					},
 					fail(res) {
 						console.log('fail', res)
-						this.$pop.toast('你取消了')
+						this.$pop.toast('失败')
 					},
 				})
 			},

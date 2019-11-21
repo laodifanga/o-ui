@@ -19,11 +19,11 @@
 			position sticky
 			z-index 1
 			top 90px
-			background var(--line)
+			background var(--silver20)
 			font-size 28px
 			padding 1em
 			font-weight 700
-			color var(--title)
+			color var(--black10)
 		.igtitle
 			top 45px
 </style>

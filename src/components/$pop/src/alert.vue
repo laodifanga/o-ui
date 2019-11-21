@@ -1,7 +1,7 @@
 <template>
   <modal ref="modal" v-bind="$props" @changed="changed">
     <div class="o-pop-alert">
-      <div class="o-pop-alert__cont">
+      <div class="o-pop-alert__cont" shadow>
         <div class="title" v-if="title">{{title}}</div>
         <div class="content" v-if="content">
           <div class="icon" v-if="image"><img :src="image"></div>
@@ -66,7 +66,7 @@
     methods: {
       tap(type) {
         this.close()
-        type ? this.success(type) : this.fail(type)
+        this.success(type)
       },
       open() {
         this.$refs.modal.open()

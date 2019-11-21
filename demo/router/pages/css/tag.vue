@@ -27,15 +27,15 @@
 		</demo>
 
 		<demo  title="tag + color">
-			<span v-for="c in color.split(' ')" gap="m5" tag="plat +" :color="`bg+ bg${c} ${c}`">标签</span>
+			<span v-for="c in color.split(' ')" gap="m5" tag="plat +" :color="`bg${c}20 ${c}`">标签</span>
 		</demo>
 
 		<demo  title="tag=plat + color">
-			<span v-for="c in color.split(' ')" gap="m5" tag="plat" :color="`${c}`">标签</span>
+			<span v-for="c in color.split(' ')" gap="m5" tag="plat" :color="`${c}10`">标签</span>
 		</demo>
 
 		<demo  title="tag=plat + color + radius">
-			<span v-for="c in color.split(' ')" gap="m5" tag="plat" radius="100" :color="`${c}`">标签</span>
+			<span v-for="c in color.split(' ')" gap="m5" tag="plat" radius="100" :color="`${c}10`"><span :color="c">标签</span></span>
 		</demo>
 	</block>
 </template>
@@ -46,7 +46,7 @@
 
 		data() {
 			return {
-				color: 'main info success warning fail black title cont desc disabled border line bg'
+				color: 'main yellow orange red blue green pink purple ghost slate black gray silver'
 			}
 		}
 	}

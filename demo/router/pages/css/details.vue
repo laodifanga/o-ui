@@ -13,15 +13,15 @@
 
 		<demo title="自定义">
 			<details details gap="mt10">
-				<summary color="fail"><div color="bgline " border="c" gap="p10">菜单</div></summary>
-				<div border="c l r b" gap="p50" color="fail">
+				<summary color="red"><div color="bgsilver " border="c" gap="p10">菜单</div></summary>
+				<div border="c l r b" gap="p50" color="red">
 					老地方
 				</div>
 			</details>
 
 			<details details gap="mt10">
-				<summary color="white"><div color="bginfo white" gap="p20">菜单</div></summary>
-				<div gap="p20" border="c" color="info">
+				<summary color="white"><div color="bgblue white" gap="p20">菜单</div></summary>
+				<div gap="p20" border="c" color="blue">
 					<span color="title">老地方</span>
 				</div>
 			</details>
