@@ -18,7 +18,7 @@
 <script>
 	import { version, prefix } from '../../../../package.json'
 	import mixins from '../../../utils/childs_mixins'
-	import formRule from '../../form-rule/src/main'
+	import formRule from '../../form-rule/src/main.vue'
 	export default {
 		name: `${prefix}FormItem`,
 
