@@ -43,12 +43,12 @@ npm i babel-plugin-component -S
 		}]
 	]
 }
-import {pager} from 'o-ui-ldf'
-Vue.use(pager)
+import {modal} from 'o-ui-ldf'
+Vue.use(modal)
 
 // OR
 
-Vue.component(pager.name, pager)
+Vue.component(modal.name, modal)
 
 // directive
 import {directive_pager} from 'o-ui-ldf/lib/directive.js'

@@ -19,10 +19,10 @@
 				<div gap="p15" row @click="$router.push({path: l.path})">
 					<span text="16" col="1">
 						{{l.name}}
-						<span tag="" v-if="l.length > 2" radius color="bgsilver white">EXT</span>
+						<span tag="" v-if="l.length > 2" radius color="bgsilver-10 white">EXT</span>
 					</span>
 					
-					<span text="14" color="silver" gap="mr5">{{l.desc}}</span> <span color="silver" arrow></span>
+					<span text="14" color="gray" gap="mr5">{{l.desc}}</span> <span color="gray" arrow></span>
 				</div>
 			</div>
 		</details>

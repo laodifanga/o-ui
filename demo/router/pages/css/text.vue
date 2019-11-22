@@ -75,7 +75,7 @@
 			</div>
 		</demo>
 
-		<demo v-for="d,i in tdata.split(' ')" :key="i" :title="`text=${d}`">
+		<demo v-for="d,i in tdata.split(' ')" :key="`a${i}`" :title="`text=${d}`">
 			<div>
 				<div class="test" :text="d">大雨哗哗飘过墙，诸葛无计找张良，关公跑了赤兔马</div>
 			</div>
