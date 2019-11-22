@@ -33,11 +33,11 @@
 		</demo>
 
 		<demo title="tag + color">
-			<span v-for="c in color.split(' ')" gap="m5" tag="plat +" :color="`bg${c}20 ${c}`">标签</span>
+			<span v-for="c in color.split(' ')" gap="m5" tag="plat +" :color="`bg${c}10 ${c}`">标签</span>
 		</demo>
 
 		<demo title="tag=plat + color">
-			<span v-for="c in color.split(' ')" gap="m5" tag="plat" :color="`${c}10`">标签</span>
+			<span v-for="c in color.split(' ')" gap="m5" tag="plat" :color="`${c}`">标签</span>
 		</demo>
 
 		<demo title="tag=plat + color + radius">
@@ -53,7 +53,7 @@
 
 		data() {
 			return {
-				color: 'main yellow orange red blue green pink purple ghost slate black gray silver'
+				color: 'main orange yellow lime green aqua teal blue navy fuchsia purple red maroon silver gray black'
 			}
 		}
 	}

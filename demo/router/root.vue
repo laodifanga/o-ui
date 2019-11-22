@@ -1,8 +1,8 @@
 <template>
 	<div class="root">
-		<div class="intro" text="tc" color="bgslate white">
+		<div class="intro" text="tc">
 			<img src="logo-inverse.png" class="intro-logo">
-			<div class="intro-name" text="24">
+			<div class="intro-name">
 				OUI
 			</div>
 		</div>
@@ -16,10 +16,10 @@
 				<div gap="p15" row @click="$router.push({path: l.path})">
 					<span text="16" col="1">
 						{{l.name}}
-						<span tag="" v-if="l.length > 2" radius color="bgslate10 white">EXT</span>
+						<span tag="" v-if="l.length > 2" radius color="bgsilver white">EXT</span>
 					</span>
 					
-					<span text="14" color="slate10" gap="mr5">{{l.desc}}</span> <span color="slate10" arrow></span>
+					<span text="14" color="silver" gap="mr5">{{l.desc}}</span> <span color="silver" arrow></span>
 				</div>
 			</div>
 		</details>
@@ -64,18 +64,21 @@
 		top: 0;
 		left: 0;
 		width 100%
-		height 100vh
-		background: var(--silver20);
+		height 100vh;
+		background: #eee;
 		overflow: auto;
 		
 	.intro
 		padding 2em 0
 		overflow hidden
+		background: linear-gradient(0deg, #3ab5b0 0%,#3d99be 31%,#56317a 100%);
 		&-logo
 			width 150px
 			height 150px
 		&-name
 			padding 1em 0 0 0
+			color white
+			font-size 44px
 
 	.sticky
 		position: sticky; 

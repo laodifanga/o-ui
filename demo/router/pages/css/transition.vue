@@ -11,7 +11,7 @@
 					</div>
 					<div gap="p10">
 						<transition :name="name">
-							<div text="tc 12" v-if="d.flag" gap="pt30 pb30" color="bgslate white">{{d.desc}}</div>
+							<div text="tc 12" v-if="d.flag" gap="pt30 pb30" color="bggray white">{{d.desc}}</div>
 						</transition>
 					</div>
 				</div>

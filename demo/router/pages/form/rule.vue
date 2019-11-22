@@ -19,7 +19,7 @@
 				<span btn="main" @click="$refs.rule.check()">验证</span>
 			</div>
 
-			<div gap="mt10 p10" color="bgmain main bg+">
+			<div gap="mt10 p10" color="bgmain10 main">
 				{{re}}
 			</div>
 		</demo>
@@ -35,7 +35,7 @@
 				<span btn="main" @click="$refs.rule2.check()">验证</span>
 			</div>
 
-			<div gap="mt10 p10" color="bgmain main bg+">
+			<div gap="mt10 p10" color="bgmain10 main">
 				{{re2}}
 			</div>
 		</demo>

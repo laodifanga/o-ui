@@ -19,7 +19,7 @@
 			position sticky
 			z-index 1
 			top 90px
-			background var(--silver20)
+			background var(--silver10)
 			font-size 28px
 			padding 1em
 			font-weight 700

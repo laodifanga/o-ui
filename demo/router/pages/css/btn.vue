@@ -109,9 +109,10 @@
 
 		<Demo title="结合color">
 			<div row="aic wrap jcsb">
-				<span v-for="c in color.split(' ')" gap="m10" btn="fit" :color="`bg${c} ${c}20`">按钮</span>
+				<span v-for="c in color.split(' ')" gap="m10" btn="fit" :color="`bg${c} ${c}10`">按钮</span>
 				<span v-for="c in color.split(' ')" gap="m10" btn="fit plat" radius :color="`${c}`">btn</span>
-				<span v-for="c in color.split(' ')" gap="m10" btn="fit plat" radius="100" :color="`bg${c}20 ${c}10`"><span
+				<span v-for="c in color.split(' ')" gap="m10" btn="fit plat" radius :color="`${c} bg${c}10`">btn</span>
+				<span v-for="c in color.split(' ')" gap="m10" btn="fit plat" radius="100" :color="`bg${c}10 ${c}10`"><span
 						:color="c">BTN</span></span>
 			</div>
 		</Demo>
@@ -126,7 +127,7 @@
 			return {
 				src: 'http://thirdwx.qlogo.cn/mmopen/vi_32/82ypiarh4VEHapO9g7619xiao4KBfEAe6oVXWKkXYTbvdY5tOLQX0cNHVaBO6g9TJNFrYWDvGwgvPicBZTp615mjA/0',
 
-				color: 'main yellow orange red blue green pink purple ghost slate black gray silver',
+				color: 'main orange yellow lime green aqua teal blue navy fuchsia purple red maroon silver gray black',
 			}
 		}
 	}

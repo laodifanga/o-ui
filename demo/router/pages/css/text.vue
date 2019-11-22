@@ -8,7 +8,7 @@
 				<div row="aic">
 					<div col="1">
 						<div text="22">预计返现</div>
-						<div text="12" color="slate10" gap="mt10">加油越多 返现越多 最高可返60元</div>
+						<div text="12" color="gray" gap="mt10">加油越多 返现越多 最高可返60元</div>
 					</div>
 					<div color="red">
 						<small text="22" gap="mr5">¥</small>
@@ -22,13 +22,13 @@
 							<i class="ico-image" gap="mr5"></i>
 							已持指定加油卡¥199.98
 						</div>
-						<div text="12" color="slate10" gap="mt15">
+						<div text="12" color="gray" gap="mt15">
 							<span gap="p5 pl15 pr15 mr10" border="c" color="orange" radius="100">附近指定加油站</span>
 							<span gap="p5 pl15 pr15" border="c" color="orange" radius="100">充油卡</span>
 						</div>
 					</div>
 					<div>
-						<span text="14" gap="p5 pl10 pr10" radius="6" color="bggreen20 green">已完成</span>
+						<span text="14" gap="p5 pl10 pr10" radius="6" color="bggreen10 green">已完成</span>
 					</div>
 				</div>
 
@@ -43,7 +43,7 @@
 						</div>
 					</div>
 					<div>
-						<span text="14" gap="p5 pl10 pr10" radius="6" color="bgorange20 orange">待完成</span>
+						<span text="14" gap="p5 pl10 pr10" radius="6" color="bgorange10 orange">待完成</span>
 					</div>
 				</div>
 			</div>
