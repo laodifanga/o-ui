@@ -45,7 +45,7 @@
 			magicName(name) {
 				return name
 					.replace('css', '样式')
-					.replace('components', '组件')
+					.replace('components', '内置组件')
 					.replace('ext', '扩展组件')
 					.replace('service', '服务')
 					.replace('form', '表单')

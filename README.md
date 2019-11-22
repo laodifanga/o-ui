@@ -63,6 +63,8 @@ Vue.directive('pager', directive_pager)
 ```
 
 ## 日志
+- 0.2.7
+	- 固定内置组件，样式，体积恒定
 - 0.2.6
 	- 新增内置服务$pop[toast,loading,alert]
 	- 重新调整样式颜色等
