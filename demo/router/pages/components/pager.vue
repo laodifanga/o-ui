@@ -55,9 +55,14 @@
 
 <script>
 	import {directive_pager} from 'src/directive/index'
+	import { pager } from 'src'
 
 	export default {
-		__name: 'pager | 滚动容器',
+		__name: 'pager | 滚动容器 | 1',
+
+		components: {
+			[pager.name]: pager
+		},
 
 		directives: {
 			pager: directive_pager

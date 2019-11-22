@@ -69,8 +69,12 @@
 		methods: {
 			check() {
 				if (!this.rule || !this.rule.length) return
-			
+				this.dirty = true
 				this.valid = this.rule.every(this._check)
+				this._emit(this)
+			},
+			reset() {
+				Object.assign(this.$data, this.$options.data())
 				this._emit(this)
 			},
 			_emit({ dirty, valid, error }) {

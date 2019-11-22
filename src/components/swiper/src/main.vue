@@ -13,11 +13,12 @@
 <script>
 	import { version, prefix } from '../../../../package.json'
 	import touchtrack from '../../../utils/touchtrack_mixins'
+	import mixins from '../../../utils/parents_mixins'
 	const DURATION = 250
 	export default {
 		name: `${prefix}Swiper`,
 
-		mixins: [touchtrack],
+		mixins: [touchtrack, mixins],
 
 		props: {
 			current: {
@@ -67,7 +68,6 @@
 
 		data() {
 			return {
-				items: [],
 				index: 0, // 跳转页
 				userTracking: false, // 用户跟踪
 			}
@@ -116,9 +116,7 @@
 				this._itemOffset = offset
 				this._itemSize = sizes
 			},
-			_addItems(vnode) {
-				this.items.push(vnode)
-			},
+		
 			_autoPlay() {
 				if (!this._timer) {
 					this._timer = setInterval(() => {

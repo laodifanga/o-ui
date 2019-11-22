@@ -1,0 +1,32 @@
+// o__element--modifier
+@import '../../base'
+.o
+	&-form-item
+		&:not(:first-child)
+			margin-top 20px
+		&__label
+			padding 20px 20px 0px 20px
+			color var(--black)
+			transition all $transTime
+			.error
+				transition all $transTime
+		&__cont
+			margin 0 20px
+			padding 20px 0
+			border-bottom 1px solid var(--silver10)
+			transition all $transTime
+		
+		&--act
+			.o-form-item__label
+				color var(--black10)
+			.o-form-item__cont
+				border-color var(--gray)
+		&--success
+			.o-form-item__cont
+				// border-color var(--green)
+		&--error
+			.o-form-item__label
+				color var(--red)
+			.o-form-item__cont
+				border-color var(--red)
+		

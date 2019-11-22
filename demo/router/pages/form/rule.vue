@@ -43,13 +43,13 @@
 </template>
 
 <script>
-	import { formRule } from 'src'
+	// import { formRule } from 'src'
 	export default {
 		__name: 'rule | 验证规则',
 
-		components: {
-			[formRule.name]: formRule
-		},
+		// components: {
+		// 	[formRule.name]: formRule
+		// },
 
 		data() {
 			return {

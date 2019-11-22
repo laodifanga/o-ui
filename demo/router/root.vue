@@ -9,7 +9,10 @@
 		
 		<details details v-for="d,name,i in data" :key="i" :open="true">
 			<summary color="white" class="sticky">
-				<div gap="p15" text="16" color="bgmain">{{name | magicName}} <span tag="sup" color="bgwhite main">{{d.length}}</span></div>
+				<div gap="p15" text="12" color="bgmain">
+					<span text="16">{{name | magicName}} </span>
+					<span tag="sup" color="bgwhite main">{{d.length}}</span>
+				</div>
 			</summary>
 			
 			<div class="list" v-for="l in d" color="title">
@@ -71,7 +74,7 @@
 	.intro
 		padding 2em 0
 		overflow hidden
-		background: linear-gradient(0deg, #3ab5b0 0%,#3d99be 31%,#56317a 100%);
+		background: linear-gradient(0deg, var(--main) 0%,#3d99be 31%,#56317a 100%);
 		&-logo
 			width 150px
 			height 150px

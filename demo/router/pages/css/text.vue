@@ -68,11 +68,14 @@
 			<span tag="fit" gap="mr10">68</span> <span text="68"><i class="ico-alert"></i></span>
 		</demo>
 
-		<demo v-for="d in odata.split(' ')" :title="`text=${d}`">
-			<div :text="d">hello world!<span v-if="d == 'vm'" btn="l">查看</span></div>
+		<demo v-for="d,i in odata.split(' ')" :key="i" :title="`text=${d}`">
+			<div :text="d">
+				hello world!
+				<span v-if="d == 'vm'" btn="l">查看</span>
+			</div>
 		</demo>
 
-		<demo v-for="d in tdata.split(' ')" :title="`text=${d}`">
+		<demo v-for="d,i in tdata.split(' ')" :key="i" :title="`text=${d}`">
 			<div>
 				<div class="test" :text="d">大雨哗哗飘过墙，诸葛无计找张良，关公跑了赤兔马</div>
 			</div>

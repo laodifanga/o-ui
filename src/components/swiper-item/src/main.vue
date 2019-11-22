@@ -6,10 +6,11 @@
 
 <script>
 	import {version, prefix} from '../../../../package.json'
+	import mixins from '../../../utils/childs_mixins'
 	export default {
 		name: `${prefix}SwiperItem`,
 
-		inject: ['$super'],
+		mixins: [mixins],
 
 		computed: {
 			styles() {
@@ -24,10 +25,6 @@
 				}
 			}
 		},
-
-		created() {
-			this.$super._addItems(this)
-		}
 	}
 </script>
 

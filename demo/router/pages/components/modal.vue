@@ -37,7 +37,7 @@
 
 <script>
 	export default {
-		__name: 'modal | 模态框 | 0',
+		__name: 'modal | 模态框',
 
 		data() {
 			return {

@@ -124,8 +124,14 @@
 </template>
 
 <script>
+	import { swiper, swiperItem } from 'src'
 	export default {
-		__name: 'swiper | 轮播图',
+		__name: 'swiper | 轮播图 | 1',
+
+		components: {
+			[swiper.name]: swiper,
+			[swiperItem.name]: swiperItem,
+		},
 
 		data() {
 			return {

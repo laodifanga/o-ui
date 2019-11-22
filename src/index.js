@@ -1,6 +1,8 @@
 import { version, prefix } from '../package.json'
 
 import $pop from './components/$pop'
+import form from './components/form'
+import formItem from './components/form-item'
 import formRule from './components/form-rule'
 import img from './components/img'
 import modal from './components/modal'
@@ -10,12 +12,13 @@ import swiperItem from './components/swiper-item'
 
 export { // demo用
 	img, 
-	formRule,
+	form, formItem, formRule,
 	modal, pager, swiper, swiperItem, $pop
 }
 
 let components = [ // 默认集成组件 其余组件按需引入
-	modal, pager, swiper, swiperItem
+	form, formItem, formRule, 
+	modal,
 ]
 import './style.styl'
 const install = (Vue, options) => {
