@@ -5,6 +5,7 @@ const resolve = dir => path.join(__dirname, '.', dir)
 module.exports = {
   lintOnSave: false,
 	productionSourceMap: false,
+	// publicPath: process.env.NODE_ENV === 'production' ? '//q1jwj5nud.bkt.clouddn.com/' : './',
 	pages: {
 		index: {
 			entry: 'demo/main.js',
@@ -20,15 +21,16 @@ module.exports = {
 			.set('src', resolve('src'))
 	},
 
-	configureWebpack:  config => {
-		if(process.env.NODE_ENV === 'production') {
-			config.plugins.push( new QiniuUploadPlugin() )
-		}
-	}
+	// 上传到七牛云
+	// configureWebpack:  config => {
+	// 	if(process.env.NODE_ENV === 'production') {
+	// 		config.plugins.push( new QiniuUploadPlugin(QiniuUploadPlugin.config) )
+	// 	}
+	// }
 
 	// configureWebpack: {
 	// 	plugins: [
-	// 		new QiniuUploadPlugin()
+	// 		new QiniuUploadPlugin(QiniuUploadPlugin.config)
 	// 	]
 	// }
 	
