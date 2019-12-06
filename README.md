@@ -139,7 +139,7 @@ npm run build:component
 npm run build:css // 已废弃
 ```
 
-### github
+### github .
 See [github](https://gitbub.com/laodifanga/o-ui).
 
 
