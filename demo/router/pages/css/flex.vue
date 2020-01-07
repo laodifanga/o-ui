@@ -70,20 +70,29 @@
     </demo>
 
     <demo title="jcsb 自适应排列">
-			<div gap="p10">
-				<span :color="currentCol == d ? 'bgmain white' : ''" btn v-for="d,i in cols" :key="i" @click="currentCol = d">
-					{{d}}
-				</span>
-			</div>
+      <div gap="p10">
+        <span
+          :color="currentCol == d ? 'bgmain white' : ''"
+          btn
+          v-for="(d, i) in cols"
+          :key="i"
+          @click="currentCol = d"
+        >
+          {{ d }}
+        </span>
+      </div>
       <div row="jcsb wrap">
         <div
           :class="currentCol"
-					text="tc"
-					gap="mt5"
+          text="tc"
+          gap="mt5"
           v-for="(d, i) in 8"
           :key="i"
         >
-          <img src="http://thirdwx.qlogo.cn/mmopen/vi_32/82ypiarh4VEHapO9g7619xiao4KBfEAe6oVXWKkXYTbvdY5tOLQX0cNHVaBO6g9TJNFrYWDvGwgvPicBZTp615mjA/132" size="w100">
+          <img
+            src="http://thirdwx.qlogo.cn/mmopen/vi_32/82ypiarh4VEHapO9g7619xiao4KBfEAe6oVXWKkXYTbvdY5tOLQX0cNHVaBO6g9TJNFrYWDvGwgvPicBZTp615mjA/132"
+            size="w100"
+          />
         </div>
       </div>
     </demo>
@@ -98,9 +107,9 @@
       return {
         data: ["", "row-reverse"],
         adata: ["aifs", "aic", "aife"],
-				jdata: ["jcfs", "jcsb", "jcsa", "jcc", "jcfe"],
-				cols: ['col1', 'col2', 'col3', 'col4', 'col5' ],
-				currentCol: 'col4'
+        jdata: ["jcfs", "jcsb", "jcsa", "jcc", "jcfe"],
+        cols: ["col1", "col2", "col3", "col4", "col5"],
+        currentCol: "col4"
       }
     }
   }
