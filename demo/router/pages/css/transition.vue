@@ -6,12 +6,12 @@
 			<div row="wrap jcsb">
 				<div v-for="d in data" size="w33">
 					<div gap="p10" text="tc">
-						<span btn="plat" size="w100" color="main" @click="change(d)">{{!d.flag ? '显示' : '隐藏'}}</span>
-						<div gap="pt10" color="slate10">o-{{d.name}}</div>
+						<span size="w100" color="bgmain white" btn @click="change(d)">{{!d.flag ? '显示' : '隐藏'}}</span>
+						<div gap="pt10" color="main">o-{{d.name}}</div>
 					</div>
 					<div gap="p10">
 						<transition :name="name">
-							<div text="tc 12" v-if="d.flag" gap="pt30 pb30" color="bggray white">{{d.desc}}</div>
+							<div text="tc 12" v-if="d.flag" gap="pt30 pb30" color="bgsilver white">{{d.desc}}</div>
 						</transition>
 					</div>
 				</div>
@@ -20,7 +20,7 @@
 
 		<demo title="o-spin o-fade o-zoom">
 			<div row="wrap jcsb">
-				<div border="c" color="silver" gap="m4">
+				<div color="silver">
 					<div gap="p10">
 						<span btn="ico" color="bgmain white" radius="100" text="42" o-spin row="aic jcc">
 							<i class="ico-loader" ></i>
@@ -28,13 +28,13 @@
 					</div>
 				</div>
 
-				<div border="c" color="silver" gap="m4">
+				<div color="silver">
 					<div gap="p10">
 						<div o-fade text="tc 12" gap="p10" color="bgmain white">o-fade</div>
 					</div>
 				</div>
 
-				<div border="c" color="silver" gap="m4">
+				<div color="silver">
 					<div gap="p10">
 						<div o-zoom text="tc 12" gap="p10" color="bgmain white">o-zoom</div>
 					</div>

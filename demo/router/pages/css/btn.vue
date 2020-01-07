@@ -127,7 +127,7 @@
 			return {
 				src: 'http://thirdwx.qlogo.cn/mmopen/vi_32/82ypiarh4VEHapO9g7619xiao4KBfEAe6oVXWKkXYTbvdY5tOLQX0cNHVaBO6g9TJNFrYWDvGwgvPicBZTp615mjA/0',
 
-				color: 'main orange yellow lime green aqua teal blue navy fuchsia purple red maroon silver gray black',
+				color: 'main orange yellow lime green teal cyan blue purple pink red silver gray black',
 			}
 		}
 	}

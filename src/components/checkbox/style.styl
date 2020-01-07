@@ -1,0 +1,51 @@
+// o__element--modifier
+@import '../../base';
+
+.o {
+	&-checkbox {
+		display: inline-flex;
+		align-content: center;
+
+		input[type='checkbox'] {
+			position: absolute;
+			opacity: 0;
+			appearance: none;
+
+			& + .check {
+				display: inline-block;
+				vertical-align: middle;
+				width: 30px;
+				height: 30px;
+				border: 2px solid var(--gray);
+				position: relative;
+
+				&:before {
+					content: '';
+					position: absolute;
+					left: 15%;
+					top: 20%;
+					width: 70%;
+					height: 30%;
+					border: 2px solid currentColor;
+					border-top: transparent;
+					border-right: transparent;
+					transition: $transTime;
+					transform: rotate(-45deg) scale(0);
+				}
+			}
+
+			&:checked + .check {
+				border-color: currentColor;
+				&:before {
+					transform: rotate(-45deg) scale(1);
+				}
+			}
+
+			& ~ .cont {
+				padding: 0 10px;
+				display: flex;
+				align-items: center;
+			}
+		}
+	}
+}

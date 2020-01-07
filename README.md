@@ -63,6 +63,11 @@ Vue.directive('pager', directive_pager)
 ```
 
 ## 日志
+- 0.2.9
+	- 颜色采用culrs方案
+	- css新增网格排列
+- 0.2.8
+	- 修复一些bug
 - 0.2.7
 	- 固定内置组件，样式，体积恒定
 - 0.2.6

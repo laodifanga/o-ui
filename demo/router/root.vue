@@ -74,7 +74,7 @@
 	.intro
 		padding 2em 0
 		overflow hidden
-		background: linear-gradient(0deg, var(--main) 0%,#3d99be 31%,#56317a 100%);
+		background: linear-gradient(0deg, var(--main),var(--main-10));
 		&-logo
 			width 150px
 			height 150px

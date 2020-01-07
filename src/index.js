@@ -1,6 +1,7 @@
 import { version, prefix } from '../package.json'
 
 import $pop from './components/$pop'
+import checkbox from './components/checkbox'
 import form from './components/form'
 import formItem from './components/form-item'
 import formRule from './components/form-rule'
@@ -11,9 +12,9 @@ import swiper from './components/swiper'
 import swiperItem from './components/swiper-item'
 
 export { // demo用
-	img, 
+	img, checkbox,
 	form, formItem, formRule,
-	modal, pager, swiper, swiperItem, $pop
+	modal, pager, swiper, swiperItem, $pop,
 }
 
 let components = [ // 默认集成组件 其余组件按需引入

@@ -1,45 +1,131 @@
 // 父元素 row row="row col row-reverse jcc aic"
-[row]
-  display flex
-  &>*
-    display block
-  &>[row]
-    display flex
-[row~='row']
-  flex-direction row
-[row~='row-reverse']
-  flex-direction row-reverse
-[row~='col']
-  flex-direction column
-[row~='col-reverse']
-  flex-direction column-reverse
+[row] {
+  display: flex;
 
-[row~='jcfe']
-  justify-content flex-end
-[row~='jcsb']
-  justify-content space-between
-[row~='jcsa']
-  justify-content space-around
-[row~='jcc']
-  justify-content center
-[row~='jcfs'] /*默认*/
-  justify-content flex-start
+  &>* {
+    display: block;
+  }
 
-[row~='aifs']
-  align-items flex-start
-[row~='aife']
-  align-items flex-end
-[row~='aic']
-  align-items center
-[row~='aib']
-  align-items baseline
-[row~='ais']  /*默认*/
-  align-items stretch
-[row~='wrap']
-  flex-wrap wrap
+  &>[row] {
+    display: flex;
+  }
+}
+
+[row~='row'] {
+  flex-direction: row;
+}
+
+[row~='row-reverse'] {
+  flex-direction: row-reverse;
+}
+
+[row~='col'] {
+  flex-direction: column;
+}
+
+[row~='col-reverse'] {
+  flex-direction: column-reverse;
+}
+
+[row~='jcfe'] {
+  justify-content: flex-end;
+}
+
+[row~='jcsb'] {
+  justify-content: space-between;
+
+  & > .col5 {
+    width: 19%;
+
+    &:last-child:nth-child(5n-1) {
+      // 4个
+      margin-right: calc(19% + 5% / 4);
+    }
+
+    &:last-child:nth-child(5n-2) {
+      // 3个
+      margin-right: calc(38% + 10% / 4);
+    }
+
+    &:last-child:nth-child(5n-3) {
+      // 2个
+      margin-right: calc(57% + 15% / 4);
+    }
+  }
+
+  & > .col4 {
+    width: 24%;
+
+    &:last-child:nth-child(4n-1) {
+      // 3个
+      margin-right: calc(24% + 4% / 3);
+    }
+
+    &:last-child:nth-child(4n-2) {
+      // 2个
+      margin-right: calc(48% + 8% / 3);
+    }
+  }
+
+  & > .col3 {
+    width: 32%;
+
+    &:last-child:nth-child(3n-1) {
+      // 2个
+      margin-right: calc(32% + 4% / 2);
+    }
+  }
+
+  & > .col2 {
+    width: 49%;
+  }
+
+  & > .col1 {
+    width: 100%;
+  }
+}
+
+[row~='jcsa'] {
+  justify-content: space-around;
+}
+
+[row~='jcc'] {
+  justify-content: center;
+}
+
+[row~='jcfs'] { /* 默认 */
+  justify-content: flex-start;
+}
+
+[row~='aifs'] {
+  align-items: flex-start;
+}
+
+[row~='aife'] {
+  align-items: flex-end;
+}
+
+[row~='aic'] {
+  align-items: center;
+}
+
+[row~='aib'] {
+  align-items: baseline;
+}
+
+[row~='ais'] { /* 默认 */
+  align-items: stretch;
+}
+
+[row~='wrap'] {
+  flex-wrap: wrap;
+}
 
 // 子元素 col="0" col="1" ...
-cols = 0 1 2 3 4 5 6 7 8 9
-for c in cols
-  [col=\'{c}\']
-    flex c c
+cols = 0 1 2 3 4 5 6 7 8 9;
+
+for c in cols {
+  [col=\'{c}\'] {
+    flex: c c;
+  }
+}
