@@ -1,22 +1,32 @@
-[arrow]
-	&:after
-		display inline-block
-		content ''
-		font-size inherit
-		width $arrowSize
-		height $arrowSize
-		border-top 2px solid currentColor
-		border-right 2px solid currentColor
-		transform rotate(45deg)
+[arrow] {
+	&:after {
+		display: inline-block;
+		content: '';
+		font-size: inherit;
+		width: $arrowSize;
+		height: $arrowSize;
+		border-top: 2px solid currentColor;
+		border-right: 2px solid currentColor;
+		transform: rotate(45deg);
+	}
 
-	&[arrow~='l']
-		&:after
-			transform rotate(-135deg)
-	&[arrow~='t']
-		&:after
-			transform rotate(-45deg)
-			transform-origin bottom center
-	&[arrow~='b']
-		&:after
-			transform rotate(135deg)
-			transform-origin center right
+	&[arrow~='l'] {
+		&:after {
+			transform: rotate(-135deg);
+		}
+	}
+
+	&[arrow~='t'] {
+		&:after {
+			transform: rotate(-45deg);
+			transform-origin: bottom center;
+		}
+	}
+
+	&[arrow~='b'] {
+		&:after {
+			transform: rotate(135deg);
+			transform-origin: center right;
+		}
+	}
+}

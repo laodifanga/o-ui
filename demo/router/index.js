@@ -8,6 +8,7 @@ let children = getRoutes()
 
 let routes = [
 	{path: '/', redirect: '/root'},
+	{path: '/china-color', component: c => import('./china-color')},
 	{path: '/root', component: c => import('./root.vue'), children}
 ]
 

@@ -8,6 +8,7 @@
     >
 
     <demo title="主色">
+      <span slot="titleRight" color="blue" @click="$router.push('/china-color')">中国色大全</span>
       <div row="wrap aic jcc">
         <div size="w33" v-for="n in ['-10', '', '10']">
           <div gap="m5" shadow radius="10" text="hidden">

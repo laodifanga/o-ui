@@ -27,7 +27,7 @@
       </o-checkbox>
     </demo>
 
-		<demo>
+    <demo>
       <o-checkbox color="red">
         <div color="green">我是内部的文字，点我也可以选择</div>
       </o-checkbox>

@@ -1,6 +1,11 @@
 <template>
 	<div class="com-demo">
-		<div class="com-demo-title igtitle">{{title || '示例'}}</div>
+		<div class="com-demo-title igtitle">
+			<div row>
+				<div col="1">{{title || '示例'}}</div>
+				<slot name="titleRight"></slot>
+			</div>
+		</div>
 		<div text="wrap" :style="{background: undefined !== background ? background : '#fff', padding: '.5em'}">
 			<slot></slot>
 		</div>

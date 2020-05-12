@@ -1,5 +1,7 @@
-@import '../base'
-$_golded = 1 - .618 
+@import '../base';
+
+$_golded = 1 - 0.618;
+
 [avatar] {
   display: inline-block;
   overflow: hidden;
@@ -9,59 +11,92 @@ $_golded = 1 - .618
   line-height: $m;
   text-align: center;
   z-index: 1;
-	background: var(--silver10, grey);
+  background: var(--silver10, grey);
 }
 
-[avatar~=s]
-  width $s
-  height $s
-  line-height $s
+[avatar~=s] {
+  width: $s;
+  height: $s;
+  line-height: $s;
+}
 
-[avatar~=l]
-  width $l
-  height $l
-  line-height $l
+[avatar~=l] {
+  width: $l;
+  height: $l;
+  line-height: $l;
+}
 
-[avatar~=group]
-  width auto
-  height auto
-  display flex
-  background none
-  [avatar]
-    display block
+[avatar~=group] {
+  width: auto;
+  height: auto;
+  display: flex;
+  background: none;
+
+  [avatar] {
+    display: block;
     // border 1px solid rgba(255,255,255,.75)
-    box-sizing border-box
-    &:not(:first-child)
-      margin-left -($m * $_golded)
-    &:first-child
-      margin-left 0
-  [avatar~=s]
-    &:not(:first-child)
-      margin-left -($s * $_golded)
-  [avatar~=l]
-    &:not(:first-child)
-      margin-left -($l * $_golded)
+    box-sizing: border-box;
 
-[avatar~=reverse]
-  justify-content flex-end
-  direction rtl
-  unicode-bidi bidi-override
-  [avatar]
-    margin-left -($m * $_golded)
-    &:last-child
-      margin-left 0
-    &:first-child
-      margin-left -($m * $_golded)
-    
-  [avatar~=s]
-    margin-left -($s * $_golded)
-    &:first-child
-      margin-left -($s * $_golded)
-  [avatar~=l]
-    margin-left -($l * $_golded)
-    &:first-child
-      margin-left -($l * $_golded)
-[avatar~=hover]
-  [avatar]
-    &:hover
-      z-index 2
+    &:not(:first-child) {
+      margin-left: -($m * $_golded);
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  [avatar~=s] {
+    &:not(:first-child) {
+      margin-left: -($s * $_golded);
+    }
+  }
+
+  [avatar~=l] {
+    &:not(:first-child) {
+      margin-left: -($l * $_golded);
+    }
+  }
+}
+
+[avatar~=reverse] {
+  justify-content: flex-end;
+  direction: rtl;
+  unicode-bidi: bidi-override;
+
+  [avatar] {
+    margin-left: -($m * $_golded);
+
+    &:last-child {
+      margin-left: 0;
+    }
+
+    &:first-child {
+      margin-left: -($m * $_golded);
+    }
+  }
+
+  [avatar~=s] {
+    margin-left: -($s * $_golded);
+
+    &:first-child {
+      margin-left: -($s * $_golded);
+    }
+  }
+
+  [avatar~=l] {
+    margin-left: -($l * $_golded);
+
+    &:first-child {
+      margin-left: -($l * $_golded);
+    }
+  }
+}
+
+[avatar~=hover] {
+  [avatar] {
+    &:hover {
+      z-index: 2;
+    }
+  }
+}
